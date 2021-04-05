@@ -9,9 +9,19 @@ export function Navigation() {
 
   //const Auto : "Shoe Dog-Feild night " , "Wovtarising Stieve JObs" ,"Open by andre agashi"
   const [subCategory, setsubCategory] = useState("all");
+  const [dropdownIcon, setdropdownIcon] = useState("dropdownIcon");
+  let navigationPills,
+    count = 0;
 
-  const [subNav, setsubNav] = useState("subCatNone");
+  dropdownIcon === "dropdownIcon"
+    ? (navigationPills = "navigationPills")
+    : (navigationPills = "navigationPillsResponsive");
 
+  const Responsive = (obj) =>
+    dropdownIcon === "dropdownIcon"
+      ? "navigationPills"
+      : "navigationPillsResponsive";
+  console.log(Responsive);
   const listItems = [
     { id: 0, category: "All" },
     {
@@ -74,14 +84,23 @@ export function Navigation() {
         {listItems.map((obj) => (
           <li
             onMouseOver={() => setsubCategory(obj.category)}
-            className="navigationPills"
+            className={navigationPills}
             key={obj.id}
           >
             {obj.category}
             <span className="subNavIcon">{obj.subNavIcon}</span>
           </li>
         ))}
-        <li className="dropdownIcon">&#9776;</li>
+        <li
+          className={dropdownIcon}
+          onClick={() => {
+            count++;
+            if (count % 2 === 0) setdropdownIcon("dropdownIconResponsive");
+            else setdropdownIcon("dropdownIcon");
+          }}
+        >
+          &#9776;
+        </li>
         <li className="navigationPills Button">
           <button className="outerSwitch">
             <button className="innerSwitch"></button>
@@ -92,7 +111,7 @@ export function Navigation() {
         {listItems.map(
           (obj) =>
             obj.subCat && (
-              <span className={subNav}>
+              <span>
                 {subCategory === obj.category &&
                   obj.subCat.map((item) => (
                     <li className="subNavPills">{item}</li>
