@@ -185,6 +185,9 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.list.list-group-item {
+  border: none;
+}
 
 .emptyHeart {
   height: 4rem;
