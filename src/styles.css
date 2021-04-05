@@ -387,8 +387,7 @@ h1 {
     display: none;
   }
   .navigationPills:hover,
-  .dropdownIcon:hover,
-  .dropdownIconResponsive:hover {
+  .dropdownIcon:hover {
     background-color: black;
     border: 1px solid white;
     padding: 0.5rem;
