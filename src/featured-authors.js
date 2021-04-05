@@ -5,7 +5,7 @@ export function FeaturedAuthors() {
       Books:
         "He is known for his books Shiva Trilogy (The Immortals of Meluha, The Secret of the Nagas, The Oath of the Vayuputras), Ram Chandra Series (Scion of Ikshvaku, Sita: Warrior of Mithila, Raavan: Enemy of Aryavarta) and Legend of Suheldev: The King Who Saved India.",
       icon:
-        "https://cms.qz.com/wp-content/uploads/2019/08/amish-e1566788994155.jpg?quality=75&strip=all&w=1600&h=900&crop=1",
+        "https://www.iimcal.ac.in/sites/all/files/styles/medium/public/images/amish.jpg?itok=8RQ4zPf-",
       nation: "India"
     },
     {
@@ -13,7 +13,7 @@ export function FeaturedAuthors() {
       Books:
         "Five of Chetan Bhagat's novels have been adapted into Bollywood films like Hello in 2008 (based on One Night @ the Call Center), 3 Idiots in 2009 (based on Five Point Someone), Kai Po Che! in 2013 (based on The 3 Mistakes of My Life); 2 States in 2014 (based on his novel of the same name) and Half Girlfriend in 2017 (based on his novel of the same name). Bhagat has also written the scripts for Bollywood films like Kick in 2014 and adapted his stories for the movies Kai Po Che! and Half Girlfriend.[5] Bhagat won the Filmfare Award for Best Screenplay for Kai Po Che! at the 59th Filmfare Awards in 2014",
       icon:
-        "https://images.fridaymagazine.ae/1_2169687/imagesList_0/1772963257_main.jpg",
+        "https://www.abc.net.au/radionational/image/3917052-1x1-340x340.jpg",
       nation: "India"
     },
     {
@@ -42,7 +42,8 @@ export function FeaturedAuthors() {
         "Grandma's Bag of Stories 1",
         "Grandma's Bag of Stories 2"
       ],
-      icon: "https://images.indianexpress.com/2019/12/sudha-murthy-1.jpg",
+      icon:
+        "https://jaipurliteraturefestival.org/uploads_jaipurlitfest/speakers/1365-sudha-murty.jpg",
       nation: "India"
     },
     {
@@ -54,7 +55,7 @@ export function FeaturedAuthors() {
         "Private India"
       ],
       icon:
-        "https://www.forbesindia.com/media/images/2017/Feb/img_93509_ashwinsanghi_01_jn_big.jpg",
+        "https://www.londonspeakerbureauasia.com/wp-content/uploads/2018/08/aa5234_f2e954b9fe734819bbde8e88b730f107~mv2.jpg",
       nation: "India"
     },
     {
