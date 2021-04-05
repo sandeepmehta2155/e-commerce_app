@@ -449,6 +449,7 @@ h1 {
 
   .bookBatchPills {
     width: 22rem;
+    margin: auto;
   }
 
   /* FOOTER*/
