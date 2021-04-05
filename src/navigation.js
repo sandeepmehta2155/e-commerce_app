@@ -96,11 +96,6 @@ export function Navigation() {
         >
           &#9776;
         </li>
-        <li className="navigationPills Button">
-          <button className="outerSwitch">
-            <button className="innerSwitch"></button>
-          </button>
-        </li>
       </ul>
       <ul className="subNav">
         {listItems.map(
