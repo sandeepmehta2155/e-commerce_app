@@ -127,6 +127,8 @@ const Cart = () => {
 
 export default function App() {
   const [disComponent, setDispComponent] = useState("products");
+  const [mode, setMode] = useState("bodyLite");
+  const [txtalign, settxtAlign] = useState("right");
   const CartIcon = () => {
     return (
       <>
@@ -141,7 +143,19 @@ export default function App() {
         </svg>
         <li className="homeOptions">&#9776;</li>
 
-        <button className="outerSwitch">
+        <button
+          className="outerSwitch"
+          onClick={() => {
+            if (mode === "bodyLite") {
+              setMode("bodyDark");
+              settxtAlign("left");
+            } else {
+              setMode("bodyLite");
+              settxtAlign("right");
+            }
+          }}
+          style={{ textAlign: txtalign }}
+        >
           <button className="innerSwitch"></button>
         </button>
       </>
@@ -153,7 +167,7 @@ export default function App() {
       <Header />
       <Navigation />
       <CartIcon />
-      <body className="body">
+      <body className={mode}>
         {disComponent === "cart" && <Cart />}
         {disComponent === "products" && <Products />}
 

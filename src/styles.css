@@ -7,6 +7,14 @@
   --secondary-color: #ffb20a;
 }
 
+.bodyDark {
+  background-color: #333333;
+  color: white;
+}
+.bodyLite {
+  background-color: white;
+}
+
 /* FOR HEADER COMPONENTS */
 
 header,
@@ -157,7 +165,6 @@ h1 {
   height: 1.6rem;
   width: 3.5rem;
   border-radius: 2rem;
-  text-align: left;
   color: grey;
   outline: none;
   position: absolute;
@@ -197,6 +204,7 @@ h1 {
 .bookBatches {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1rem;
 }
 
 .bookBatchPills {
@@ -267,13 +275,6 @@ h1 {
 /*Mobile screen */
 
 @media (max-width: 600px) {
-  .bodyDark {
-    background-color: #333333;
-    color: white;
-  }
-  .bodyLight {
-    background-color: white;
-  }
   header {
     height: 8rem;
     width: 21.5rem;
@@ -395,7 +396,6 @@ h1 {
     height: 1.6rem;
     width: 3.5rem;
     border-radius: 2rem;
-    text-align: left;
     position: absolute;
     top: 8.7rem;
     right: 1rem;
