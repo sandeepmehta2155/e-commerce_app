@@ -149,19 +149,20 @@ export default function App() {
       <Header />
       <Navigation />
       <CartIcon />
+      <body className="body">
+        {disComponent === "cart" && <Cart />}
+        {disComponent === "products" && <Products />}
 
-      {disComponent === "cart" && <Cart />}
-      {disComponent === "products" && <Products />}
-
-      <br />
-      <button
-        className="btn card-link"
-        onClick={() => setDispComponent("products")}
-      >
-        Products
-      </button>
-      <BookBatches />
-      <FeaturedAuthors />
+        <br />
+        <button
+          className="btn card-link"
+          onClick={() => setDispComponent("products")}
+        >
+          Products
+        </button>
+        <BookBatches />
+        <FeaturedAuthors />
+      </body>
       <Footer />
     </div>
   );

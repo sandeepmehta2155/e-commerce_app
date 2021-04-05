@@ -9,7 +9,7 @@ export function Navigation() {
 
   //const Auto : "Shoe Dog-Feild night " , "Wovtarising Stieve JObs" ,"Open by andre agashi"
   const [subCategory, setsubCategory] = useState("all");
-  const [dropdownIcon, setdropdownIcon] = useState("dropdownIcon");
+  const [dropdownIcon, setdropdownIcon] = useState("dropdownIconResponsive");
   let navigationPills,
     count = 0;
 
@@ -17,11 +17,6 @@ export function Navigation() {
     ? (navigationPills = "navigationPills")
     : (navigationPills = "navigationPillsResponsive");
 
-  const Responsive = (obj) =>
-    dropdownIcon === "dropdownIcon"
-      ? "navigationPills"
-      : "navigationPillsResponsive";
-  console.log(Responsive);
   const listItems = [
     { id: 0, category: "All" },
     {
