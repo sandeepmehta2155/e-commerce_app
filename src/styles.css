@@ -372,6 +372,8 @@ h1 {
     display: list-item;
     list-style: none;
     padding: 1rem;
+    position: relative;
+    top: 1.2rem;
   }
   .navigationPillsResponsive {
     display: none;
