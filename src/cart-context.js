@@ -24,7 +24,8 @@ const itemsInCart = [
       "https://images-na.ssl-images-amazon.com/images/I/51VFQePgXxL._SX326_BO1,204,203,200_.jpg",
     Originalprice: 989,
     price: 824,
-    quantity: 0
+    quantity: 0,
+    wishList: "no"
   },
   {
     id: 2,
@@ -32,6 +33,7 @@ const itemsInCart = [
     Originalprice: 399,
     price: 380,
     quantity: 0,
+    wishList: "no",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/51B50rWGTkL._SX315_BO1,204,203,200_.jpg"
   },
@@ -40,6 +42,7 @@ const itemsInCart = [
     name: "How do I made...",
     Originalprice: 295,
     price: 251,
+    wishList: "no",
     quantity: 0,
     src:
       "https://images-na.ssl-images-amazon.com/images/I/513nAJS9epL._SX326_BO1,204,203,200_.jpg"
@@ -50,6 +53,7 @@ const itemsInCart = [
     Originalprice: 725,
     price: 604,
     quantity: 0,
+    wishList: "no",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/41jKUY3iEFL._SX379_BO1,204,203,200_.jpg"
   },
@@ -59,6 +63,7 @@ const itemsInCart = [
     Originalprice: 799,
     price: 450,
     quantity: 0,
+    wishList: "no",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/51DLoxAJ68L._SX324_BO1,204,203,200_.jpg"
   },
@@ -68,6 +73,7 @@ const itemsInCart = [
     Originalprice: 499,
     price: 370,
     quantity: 0,
+    wishList: "no",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/41l0cQEXrCL._SX346_BO1,204,203,200_.jpg"
   }
@@ -142,6 +148,36 @@ function cartReducer(state, action) {
               return {
                 ...item,
                 quantity: 0
+              };
+            default:
+              return { ...item };
+          }
+        })
+      };
+    case "addToWishList":
+      return {
+        ...state,
+        itemsInCart: state.itemsInCart.map((item) => {
+          switch (item.id) {
+            case action.obj.id:
+              return {
+                ...item,
+                wishList: "yes"
+              };
+            default:
+              return { ...item };
+          }
+        })
+      };
+    case "removeFromWishList":
+      return {
+        ...state,
+        itemsInCart: state.itemsInCart.map((item) => {
+          switch (item.id) {
+            case action.obj.id:
+              return {
+                ...item,
+                wishList: "no"
               };
             default:
               return { ...item };

@@ -189,10 +189,11 @@ h1 {
   border: none;
 }
 
-.emptyHeart {
+.emptyHeart,
+.filledHeart {
   height: 4rem;
   width: 4rem;
-  fill: red;
+  fill: var(--primary-color);
   position: relative;
   top: 2rem;
   left: 5rem;
@@ -427,10 +428,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .emptyHeart {
+  .emptyHeart,
+  .filledHeart {
     height: 2rem;
     width: 3rem;
-    fill: red;
     position: relative;
     top: 1rem;
     left: 0.5rem;
