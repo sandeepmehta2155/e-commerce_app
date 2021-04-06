@@ -26,7 +26,7 @@ export function Header() {
           <option> Today's Deals</option>
         </select>
 
-        <input type="text" className="search" />
+        <input type="search" className="search" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
