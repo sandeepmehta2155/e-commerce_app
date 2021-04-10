@@ -29,7 +29,6 @@ export const Products = () => {
         onChange={() => setFastDelivery(!fastDelvry)}
       />
       <label for="checkTwo">Fast Delivery</label>
-      {console.log(fastDelvry)}
 
       <h1>Books in focus</h1>
       <ul className="productList">
