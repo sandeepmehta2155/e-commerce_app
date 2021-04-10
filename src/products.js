@@ -5,6 +5,9 @@ export const Products = () => {
   const { itemsInCart, cartDispatch } = useCart();
   const [IncludeOutOfStock, setIncludeOutOfStock] = useState(true);
   const [fastDelvry, setFastDelivery] = useState(false);
+  const [value, onChange] = useState(1);
+
+  const [sorting, setSorting] = useState();
 
   return (
     <div>
@@ -13,23 +16,54 @@ export const Products = () => {
         alt="loading..."
         className="Img"
       />
-      <h3>Filters</h3>
-      <input
-        type="checkbox"
-        name="checkOne"
-        value="IncludeOutOfStock"
-        onChange={() => setIncludeOutOfStock(!IncludeOutOfStock)}
-      />
-      <label for="checkOne">Include out of stock </label>
+      <fieldset>
+        <legend>Sort By</legend>
+        <input
+          type="radio"
+          name="sorting"
+          value="lowToHigh"
+          onChange={() => setSorting("lowToHigh")}
+        />
+        <label for="lowToHigh">Low-To-High</label>
+        <input
+          type="radio"
+          name="sorting"
+          value="highToLow"
+          onChange={() => setSorting("highToLow")}
+        />
+        <label for="HighToLow">High-To-Low</label>
+      </fieldset>
 
-      <input
-        type="checkbox"
-        name="checkTwo"
-        value="fastDelivery"
-        onChange={() => setFastDelivery(!fastDelvry)}
-      />
-      <label for="checkTwo">Fast Delivery</label>
+      <fieldset>
+        <legend>Filters</legend>
+        <input
+          type="checkbox"
+          name="checkOne"
+          value="IncludeOutOfStock"
+          onChange={() => setIncludeOutOfStock(!IncludeOutOfStock)}
+        />
+        <label for="checkOne">Include out of stock </label>
 
+        <input
+          type="checkbox"
+          name="checkTwo"
+          value="fastDelivery"
+          onChange={() => setFastDelivery(!fastDelvry)}
+        />
+        <label for="checkTwo">Fast Delivery</label>
+        <br />
+        <br />
+        <input
+          type="range"
+          min="1"
+          max="1000"
+          value={value}
+          onChange={({ target: { value: radius } }) => {
+            onChange(radius);
+          }}
+        />
+        <div>Show items greater than : {value} Rs</div>
+      </fieldset>
       <h1>Books in focus</h1>
       <ul className="productList">
         {itemsInCart
@@ -41,6 +75,10 @@ export const Products = () => {
             if (fastDelvry) return obj.fastDelivery === "yes";
             return obj;
           })
+          .filter((obj) => obj.price > value)
+          .sort((a, b) =>
+            sorting === "highToLow" ? a.price - b.price : b.price - a.price
+          )
           .map((obj) => {
             return (
               <li className="card" key={obj.id} style={{ listStyle: "none" }}>
