@@ -136,13 +136,13 @@ export function FeaturedAuthors() {
   ];
 
   return (
-    <div>
+    <>
       <h1> Featured India Authors </h1>
       <ul className="img-group">
-        {FeaturedAuthors.map((obj) => {
+        {FeaturedAuthors.map((obj, index) => {
           return (
             obj.nation === "India" && (
-              <li className="list list-group-item">
+              <li key={index} className="list list-group-item">
                 <img className="circle" alt="loading" src={obj.icon} />
               </li>
             )
@@ -151,10 +151,10 @@ export function FeaturedAuthors() {
       </ul>
       <h1> Featured International Authors </h1>
       <ul className="img-group">
-        {FeaturedAuthors.map((obj) => {
+        {FeaturedAuthors.map((obj, index) => {
           return (
             obj.nation !== "India" && (
-              <li className="list list-group-item">
+              <li key={index} className="list list-group-item">
                 <img className="circle" alt="loading" src={obj.icon} />
               </li>
             )
@@ -163,14 +163,14 @@ export function FeaturedAuthors() {
       </ul>
       <h1> Featured Series</h1>
       <ul className="img-group">
-        {FeaturedSeries.map((obj) => {
+        {FeaturedSeries.map((obj, index) => {
           return (
-            <li className="list list-group-item">
+            <li key={index} className="list list-group-item">
               <img className="square" alt="loading" src={obj.titleSrc} />
             </li>
           );
         })}
       </ul>
-    </div>
+    </>
   );
 }

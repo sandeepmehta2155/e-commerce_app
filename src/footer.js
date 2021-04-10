@@ -28,15 +28,17 @@ export function Footer() {
               <strong>About Us</strong>
             </span>
             <ul>
-              {AboutItems.map((obj) => (
-                <li className="aboutUsList">{obj}</li>
+              {AboutItems.map((obj, index) => (
+                <li key={index} className="aboutUsList">
+                  {obj}
+                </li>
               ))}
             </ul>
           </div>
           <div className="App">
             <ul>
-              {AppItems.map((obj) => (
-                <li className="appItems">
+              {AppItems.map((obj, index) => (
+                <li key={index} className="appItems">
                   <img
                     className="desktop-androidDownLink"
                     src={obj.src}

@@ -10,7 +10,7 @@ export const Products = () => {
   const [sorting, setSorting] = useState();
 
   return (
-    <div>
+    <>
       <img
         src="https://paradigmlife.net/blog/wp-content/uploads/2015/04/Wealth-books-pic-1024x768.jpg"
         alt="loading..."
@@ -24,14 +24,14 @@ export const Products = () => {
           value="lowToHigh"
           onChange={() => setSorting("lowToHigh")}
         />
-        <label for="lowToHigh">Low-To-High</label>
+        <label htmlFor="lowToHigh">Low-To-High</label>
         <input
           type="radio"
           name="sorting"
           value="highToLow"
           onChange={() => setSorting("highToLow")}
         />
-        <label for="HighToLow">High-To-Low</label>
+        <label htmlFor="HighToLow">High-To-Low</label>
       </fieldset>
 
       <fieldset>
@@ -42,7 +42,7 @@ export const Products = () => {
           value="IncludeOutOfStock"
           onChange={() => setIncludeOutOfStock(!IncludeOutOfStock)}
         />
-        <label for="checkOne">Include out of stock </label>
+        <label htmlFor="checkOne">Include out of stock </label>
 
         <input
           type="checkbox"
@@ -50,7 +50,7 @@ export const Products = () => {
           value="fastDelivery"
           onChange={() => setFastDelivery(!fastDelvry)}
         />
-        <label for="checkTwo">Fast Delivery</label>
+        <label htmlFor="checkTwo">Fast Delivery</label>
         <br />
         <br />
         <input
@@ -146,6 +146,6 @@ export const Products = () => {
             );
           })}
       </ul>
-    </div>
+    </>
   );
 };

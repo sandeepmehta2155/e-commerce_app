@@ -224,7 +224,10 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
+/* FEATURED AUTHORS */
+.list.list-group-item {
+  margin: auto;
+}
 /* FOOTER*/
 
 .footer {
