@@ -25,7 +25,9 @@ const itemsInCart = [
     Originalprice: 989,
     price: 824,
     quantity: 0,
-    wishList: "no"
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes"
   },
   {
     id: 2,
@@ -34,6 +36,8 @@ const itemsInCart = [
     price: 380,
     quantity: 0,
     wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/51B50rWGTkL._SX315_BO1,204,203,200_.jpg"
   },
@@ -44,6 +48,8 @@ const itemsInCart = [
     price: 251,
     wishList: "no",
     quantity: 0,
+    stockStatus: "InStock",
+    fastDelivery: "yes",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/513nAJS9epL._SX326_BO1,204,203,200_.jpg"
   },
@@ -54,6 +60,8 @@ const itemsInCart = [
     price: 604,
     quantity: 0,
     wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/41jKUY3iEFL._SX379_BO1,204,203,200_.jpg"
   },
@@ -64,6 +72,8 @@ const itemsInCart = [
     price: 450,
     quantity: 0,
     wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "no",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/51DLoxAJ68L._SX324_BO1,204,203,200_.jpg"
   },
@@ -74,6 +84,8 @@ const itemsInCart = [
     price: 370,
     quantity: 0,
     wishList: "no",
+    stockStatus: "OutOfStock",
+    fastDelivery: "yes",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/41l0cQEXrCL._SX346_BO1,204,203,200_.jpg"
   }
