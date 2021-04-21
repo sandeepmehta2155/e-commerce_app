@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "./header";
 import { Navigation } from "./navigation";
 import "./styles.css";
@@ -8,11 +8,24 @@ import { Products } from "./products";
 import { Cart } from "./cart";
 import { WishList } from "./wishlist";
 import { Footer } from "./footer";
+import axios from "axios";
 
 export default function App() {
   const [disComponent, setDispComponent] = useState("products");
   const [mode, setMode] = useState("bodyLite");
   const [txtalign, settxtAlign] = useState("right");
+  const [chatBot, setChatBot] = useState("none");
+  const [chat, setChat] = useState("");
+  const [chatOutput, setChatOutput] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://breaking-bad-quotes.herokuapp.com/v1/quotes/5")
+      .then((res) => {
+        setChatOutput(res.data[0].quote);
+      });
+  }, [chat]);
+
   const CartIcon = () => {
     return (
       <>
@@ -51,6 +64,38 @@ export default function App() {
   return (
     <>
       <Header />
+      <div
+        className="chatBox"
+        style={{
+          display: chatBot
+        }}
+      >
+        <input
+          type="text"
+          className="chatBot"
+          onKeyDown={(e) =>
+            e.key === "Enter" ? setChat(e.target.value) : setChat("")
+          }
+        />
+        <div className="chatOuput">{chatOutput}</div>
+        <div className="chatFooter">
+          This is just for fun 😄 <div />
+          Please don't mind
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        fill="gray"
+        className="bi bi-chat-dots"
+        viewBox="0 0 24 24"
+        onClick={() =>
+          setChatBot((chatBot) => (chatBot === "none" ? "" : "none"))
+        }
+      >
+        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+      </svg>
       <Navigation />
       <CartIcon />
 

@@ -11,7 +11,7 @@ export function FeaturedAuthors() {
         setFeaturedAuthors(resp.data.FeaturedAuthors);
         setFeaturedSeries(resp.data.FeaturedSeries);
       });
-  });
+  }, []);
 
   return (
     <>

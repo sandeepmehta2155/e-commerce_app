@@ -16,7 +16,7 @@ export function BookBatches() {
     <div className="bookBatches">
       {img ? (
         img.map((obj) => (
-          <img className="bookBatchPills" src={obj} alt="loading" />
+          <img className="bookBatchPills" src={obj} alt="loading" key={obj} />
         ))
       ) : (
         <img
