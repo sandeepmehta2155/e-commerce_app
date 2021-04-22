@@ -30,6 +30,94 @@ h1 {
   text-align: center;
 }
 
+/*New Cat*/
+
+.background {
+  background-color: lightgray;
+  border-radius: 50%;
+  box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
+    0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
+    0 25px 20px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 80px;
+}
+.chat-bubble {
+  cursor: pointer;
+  position: relative;
+}
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2.75;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 90;
+  stroke-dashoffset: -20;
+}
+.line2 {
+  stroke-dasharray: 67 87;
+  stroke-dashoffset: -18;
+}
+.circle {
+  fill: #000;
+  stroke: none;
+  transform-origin: 50%;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.circle1 {
+  animation: MoveUpDown 1s linear infinite;
+}
+.circle2 {
+  animation: MoveUpDown1 1s linear infinite;
+}
+.circle3 {
+  animation: MoveUpDown2 1s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  90% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes MoveUpDown1 {
+  0%,
+  90% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes MoveUpDown2 {
+  0%,
+  90% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /*Chat box*/
 .bi.bi-chat-dots,
 .chatBot,
@@ -399,13 +487,14 @@ h1 {
   .chatBox,
   .chatFooter {
     position: fixed;
-    bottom: 15rem;
+    bottom: 16rem;
     right: 0rem;
     z-index: 999;
   }
   .bi.bi-chat-dots {
-    width: 4.5rem;
-    height: 4.5rem;
+    position: fixed;
+    bottom: 20rem;
+    height: 4rem;
   }
   .chatFooter {
     bottom: 0rem;
@@ -426,7 +515,7 @@ h1 {
     border: 1px solid black;
     bottom: 2rem;
     right: 5rem;
-    height: 16rem;
+    height: 17rem;
     width: 13rem;
     border-radius: 2rem;
   }

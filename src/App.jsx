@@ -65,6 +65,32 @@ export default function App() {
     <>
       <Header />
       <div
+        class="bi bi-chat-dots"
+        onClick={() =>
+          setChatBot((chatBot) => (chatBot === "none" ? "" : "none"))
+        }
+      >
+        <div class="background"></div>
+        <svg class="chat-bubble" width="100" height="100" viewBox="0 0 100 100">
+          <path
+            class="line line1"
+            d="M 30.7873,85.113394       30.7873,46.556405 C 30.7873,41.101961
+          36.826342,35.342 40.898074,35.342 H 59.113981 C 63.73287,35.342
+          69.29995,40.103201 69.29995,46.784744"
+          />
+          <path
+            class="line line2"
+            d="M 13.461999,65.039335 H 58.028684 C
+            63.483128,65.039335
+            69.243089,59.000293 69.243089,54.928561 V 45.605853 C
+            69.243089,40.986964 65.02087,35.419884 58.339327,35.419884"
+          />
+          <circle class="circle circle1" r="1.9" cy="50.7" cx="42.5" />
+          <circle class="circle circle2" cx="49.9" cy="50.7" r="1.9" />
+          <circle class="circle circle3" r="1.9" cy="50.7" cx="57.3" />
+        </svg>
+      </div>
+      <div
         className="chatBox"
         style={{
           display: chatBot
@@ -87,17 +113,7 @@ export default function App() {
           Please don't mind
         </div>
       </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="gray"
-        className="bi bi-chat-dots"
-        viewBox="0 0 24 24"
-        onClick={() =>
-          setChatBot((chatBot) => (chatBot === "none" ? "" : "none"))
-        }
-      >
-        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-      </svg>
+
       <Navigation />
       <CartIcon />
 
