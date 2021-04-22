@@ -39,16 +39,20 @@ h1 {
   bottom: 15rem;
   right: 5rem;
   z-index: 999;
+  width: 100px;
+  height: 100px;
 }
 .chatFooter {
-  bottom: 3rem;
+  bottom: 0rem;
   right: 23rem;
   color: white;
+  width: 10rem;
 }
 
 .chatBot {
   right: 14rem;
   bottom: 16rem;
+  height: 1.5rem;
   width: 25rem;
   border-radius: 1rem;
   outline: none;
@@ -399,15 +403,19 @@ h1 {
     right: 0rem;
     z-index: 999;
   }
+  .bi.bi-chat-dots {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
   .chatFooter {
-    bottom: 3rem;
-    right: 8rem;
+    bottom: 0rem;
+    right: 6rem;
     color: white;
   }
 
   .chatBot {
     position: fixed;
-    right: 8rem;
+    right: 6rem;
     width: 10rem;
     border-radius: 1rem;
     outline: none;
@@ -417,7 +425,7 @@ h1 {
     background-color: #333333;
     border: 1px solid black;
     bottom: 2rem;
-    right: 6.5rem;
+    right: 5rem;
     height: 16rem;
     width: 13rem;
     border-radius: 2rem;

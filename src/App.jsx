@@ -79,14 +79,16 @@ export default function App() {
         />
         <div className="chatOuput">{chatOutput}</div>
         <div className="chatFooter">
-          This is just for fun 😄 <div />
+          This is just for fun
+          <span role="img" aria-labelledby="smiley">
+            😄
+          </span>
+          <div />
           Please don't mind
         </div>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="100"
-        height="100"
         fill="gray"
         className="bi bi-chat-dots"
         viewBox="0 0 24 24"
