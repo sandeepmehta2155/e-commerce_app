@@ -22,11 +22,11 @@ export function Footer() {
     <>
       <footer>
         <h1 className="nameFooter">Flanbieuto</h1>
-        <div class="container">
-          <div class="dash one"></div>
-          <div class="dash two"></div>
-          <div class="dash three"></div>
-          <div class="dash four"></div>
+        <div className="container">
+          <div className="dash one"></div>
+          <div className="dash two"></div>
+          <div className="dash three"></div>
+          <div className="dash four"></div>
         </div>
 
         <div className="footer">

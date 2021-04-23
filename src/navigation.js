@@ -87,7 +87,7 @@ export function Navigation() {
           </li>
         ))}
         <li
-          key="9999"
+          key="&#9776"
           className={dropdownIcon}
           onClick={() => {
             dropdownIcon === "dropdownIcon"
@@ -102,7 +102,7 @@ export function Navigation() {
         {listItems.map(
           (obj) =>
             obj.subCat && (
-              <span>
+              <span key={obj.id}>
                 {subCategory === obj.category &&
                   obj.subCat.map((item, index) => (
                     <li key={index} className="subNavPills">
