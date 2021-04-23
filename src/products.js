@@ -16,7 +16,7 @@ export const Products = () => {
         alt="loading..."
         className="Img"
       />
-      <fieldset>
+      <fieldset className="filters">
         <legend>Sort By</legend>
         <input
           type="radio"
@@ -34,7 +34,7 @@ export const Products = () => {
         <label htmlFor="HighToLow">High-To-Low</label>
       </fieldset>
 
-      <fieldset>
+      <fieldset className="filters">
         <legend>Filters</legend>
         <input
           type="checkbox"
@@ -64,7 +64,7 @@ export const Products = () => {
         />
         <div>Show items greater than : {value} Rs</div>
       </fieldset>
-      <h1>Books in focus</h1>
+      <h1 className="productsHead">Books in focus</h1>
       <ul className="productList">
         {itemsInCart
           .filter((obj) => {

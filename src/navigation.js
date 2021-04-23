@@ -10,8 +10,7 @@ export function Navigation() {
   //const Auto : "Shoe Dog-Feild night " , "Wovtarising Stieve JObs" ,"Open by andre agashi"
   const [subCategory, setsubCategory] = useState("all");
   const [dropdownIcon, setdropdownIcon] = useState("dropdownIconResponsive");
-  let navigationPills,
-    count = 0;
+  let navigationPills;
 
   dropdownIcon === "dropdownIcon"
     ? (navigationPills = "navigationPills")
@@ -35,13 +34,13 @@ export function Navigation() {
         </svg>
       ),
       subCat: [
-        "Young-Adult",
+        " Young-Adult",
         " Mystery-suspense ",
-        "Historical",
+        " Historical",
         " Drama",
         " Fantasy",
         " Scifi",
-        "Graphic Novels(comics)"
+        " Graphic Novels(comics)"
       ]
     },
     { id: 2, category: "Poetry" },
@@ -83,16 +82,17 @@ export function Navigation() {
             key={obj.id}
           >
             {obj.category}
-            <span className="subNavIcon">{obj.subNavIcon}</span>
+
+            <label className="subNavIcon">{obj.subNavIcon}</label>
           </li>
         ))}
         <li
           key="9999"
           className={dropdownIcon}
           onClick={() => {
-            count++;
-            if (count % 2 === 0) setdropdownIcon("dropdownIconResponsive");
-            else setdropdownIcon("dropdownIcon");
+            dropdownIcon === "dropdownIcon"
+              ? setdropdownIcon("dropdownIconResponsive")
+              : setdropdownIcon("dropdownIcon");
           }}
         >
           &#9776;

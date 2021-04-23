@@ -58,6 +58,7 @@ export default function App() {
 
         <ul className={options}>
           <li className="optionSet pills"> Home </li>
+          <li className="optionSet pills"> Login </li>
           <li className="optionSet pills"> Products </li>
           <li className="optionSet pills"> Cart </li>
           <li className="optionSet pills"> WishList </li>
