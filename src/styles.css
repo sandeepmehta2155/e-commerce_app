@@ -6,13 +6,19 @@
   --primary-color: purple;
   --secondary-color: #ffb20a;
 }
-
+body {
+  margin: auto;
+  padding: 0;
+  /* width: 100%; */
+}
 .bodyDark {
   background-color: #333333;
   color: white;
 }
 .bodyLite {
   background-color: white;
+  margin: 0;
+  width: 100%;
 }
 
 /* FOR HEADER COMPONENTS */
@@ -120,7 +126,7 @@ h1 {
   position: absolute;
   z-index: 999;
   right: 35%;
-  top: 53rem;
+  top: 112%;
   transform: translate(-50%, -50%);
   display: flex;
 }
@@ -310,9 +316,9 @@ h1 {
 
 .name,
 .nameFooter {
-  position: relative;
-  left: 0rem;
-  top: -1.2rem;
+  position: fixed;
+  left: 4.5rem;
+  top: 1rem;
   color: var(--primary-color);
   font-family: "Sacramento", sans-serif;
   font-size: 2rem;
@@ -338,9 +344,9 @@ h1 {
 }
 
 .search {
-  position: relative;
-  left: 8rem;
-  top: -1.2rem;
+  position: fixed;
+  left: 21.5rem;
+  top: 1.4rem;
   height: 2.5rem;
   width: 733px;
   outline: none;
@@ -438,9 +444,12 @@ h1 {
 /* HOME page images */
 .Img {
   position: relative;
-  top: 9.2rem;
+  display: block;
+  top: 8.5rem;
   width: 100%;
   height: 45rem;
+  border: 3px solid black;
+  margin-left: 0.15rem;
 }
 .Img:hover {
   opacity: 0.85;
@@ -467,7 +476,8 @@ h1 {
   width: 100%;
   position: fixed;
   z-index: 9999;
-  top: 5.7rem;
+  top: 5rem;
+  overflow: hidden;
 }
 .subNavIcon {
   position: relative;
@@ -492,7 +502,7 @@ h1 {
   color: white;
   margin: 0;
   position: fixed;
-  top: 9.04rem;
+  top: 8.2rem;
   z-index: 9999;
   width: 100%;
   opacity: 0.85;
@@ -500,7 +510,7 @@ h1 {
 .subNavPills {
   list-style: none;
   padding: 1rem;
-  width: 10rem;
+  width: 100%;
   z-index: inherit;
 }
 
@@ -513,7 +523,7 @@ h1 {
   color: grey;
   outline: none;
   position: fixed;
-  top: 6.5rem;
+  top: 5.7rem;
   right: 5rem;
   z-index: 99999;
 }
@@ -579,6 +589,8 @@ h1 {
 
 .footer {
   display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 .aboutUs {
   position: relative;
@@ -636,6 +648,10 @@ h1 {
 @media (max-width: 1280px) {
   .Img {
     width: 100%;
+    top: 5.6rem;
+  }
+  .container {
+    display: none;
   }
   .searchBar {
     position: fixed;
@@ -646,11 +662,14 @@ h1 {
     position: fixed;
     left: 18rem;
     top: 1.4rem;
-    width: 27rem;
+    width: 400px;
+  }
+  .navigation {
+    top: 5rem;
   }
   .bi.bi-search {
     position: fixed;
-    left: 45rem;
+    left: 688px;
     top: 1.4rem;
   }
   .productList {
@@ -660,9 +679,10 @@ h1 {
   .bookBatches {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: auto;
   }
   .bookBatchPills {
-    width: 25rem;
+    width: 80%;
     margin: auto;
   }
 
@@ -713,24 +733,23 @@ h1 {
     bottom: 1rem;
     left: 1rem;
   }
+  .badges {
+    display: none;
+  }
 }
 /*Mobile screen */
 
 @media (max-width: 670px) {
-  html {
-    margin: 0;
-    padding: 0;
-    /* width: 100%; */
-  }
-
   header {
     height: 8rem;
   }
   footer {
     width: 100%;
+    overflow: hidden;
   }
   .name {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    top: 1.4rem;
   }
   .symbol {
     width: 4rem;
@@ -756,15 +775,15 @@ h1 {
   }
 
   .search {
-    position: absolute;
+    position: fixed;
     left: 5rem;
     top: 5rem;
-    width: 10rem;
+    width: 150px;
   }
 
   .bi.bi-search {
     position: fixed;
-    left: 15rem;
+    left: 230px;
     top: 5rem;
   }
 
@@ -849,13 +868,9 @@ h1 {
     height: 20rem;
     top: 12rem;
   }
-  .Img:hover {
-    opacity: 0.85;
-    width: 99.5%;
-    border: 3px solid var(--secondary-color);
-  }
+
   .filters {
-    top: 11.5rem;
+    top: 12.5rem;
   }
 
   /* NAVIGATION BAR */
@@ -921,7 +936,7 @@ h1 {
     top: 9rem;
     float: right;
     right: 0rem;
-    width: 7rem;
+    width: 100%;
   }
 
   .subNavIcon {
@@ -978,6 +993,7 @@ h1 {
   .footer {
     display: list-item;
     height: 27rem;
+    width: 100%;
   }
 
   .aboutUs {

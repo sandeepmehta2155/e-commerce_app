@@ -22,12 +22,6 @@ export function Footer() {
     <>
       <footer>
         <h1 className="nameFooter">Flanbieuto</h1>
-        <div className="container">
-          <div className="dash one"></div>
-          <div className="dash two"></div>
-          <div className="dash three"></div>
-          <div className="dash four"></div>
-        </div>
 
         <div className="footer">
           <div className="About">
