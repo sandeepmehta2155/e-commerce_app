@@ -34,21 +34,15 @@ h1 {
 
 /*BOT CHAT*/
 
-.background {
+.chat-bubble {
+  position: fixed;
+  bottom: 23rem;
+  right: 3rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  z-index: 999999;
   background-color: lightgray;
   border-radius: 50%;
-  box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
-    0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
-    0 25px 20px rgba(0, 0, 0, 0.1);
-  height: 80px;
-  left: 10px;
-  position: absolute;
-  top: 10px;
-  width: 80px;
-}
-.chat-bubble {
-  cursor: pointer;
-  position: relative;
 }
 .line {
   fill: none;
@@ -386,7 +380,6 @@ h1 {
 /* SIDE NAV FOR ROUTING ACROSS PAGES*/
 
 .homeOptions {
-  display: block;
   position: fixed;
   top: 1.5rem;
   right: 1rem;
@@ -724,10 +717,12 @@ h1 {
 /*Mobile screen */
 
 @media (max-width: 670px) {
-  body {
+  html {
     margin: 0;
     padding: 0;
+    /* width: 100%; */
   }
+
   header {
     height: 8rem;
   }
@@ -743,19 +738,16 @@ h1 {
   .container {
     display: none;
   }
-  .background {
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    top: 20rem;
-    left: 15rem;
-  }
+
   .chat-bubble {
     position: fixed;
-    top: 19rem;
-    left: 14.55rem;
-    height: 5rem;
+    bottom: 18rem;
+    right: 1rem;
+    height: 4rem;
     width: 4rem;
+    z-index: 99999999;
+    background-color: lightgray;
+    border-radius: 50%;
   }
   .searchBar {
     position: fixed;
@@ -779,12 +771,12 @@ h1 {
   .bi.bi-cart3 {
     height: 2rem;
     width: 2rem;
-    right: 4rem;
+    right: 4.5rem;
     top: 1.7rem;
   }
   .cartTotalQuantity {
     position: fixed;
-    right: 4.4rem;
+    right: 4.8rem;
     top: 1rem;
   }
   .wishList {
@@ -799,6 +791,7 @@ h1 {
   .homeOptions {
     width: 2rem;
     height: 2rem;
+    right: 2rem;
     font-size: 1.4rem;
   }
   /*Chat box*/
@@ -809,12 +802,14 @@ h1 {
   .chatFooter {
     position: fixed;
     bottom: 16rem;
-    right: 0rem;
+    right: 3rem;
     z-index: 99999;
   }
   .bi.bi-chat-dots {
     position: fixed;
     bottom: 20rem;
+    right: 3rem;
+    width: 3rem;
     height: 4rem;
   }
   .chatFooter {
@@ -888,9 +883,10 @@ h1 {
     background-color: #333333;
     color: white;
     margin: 0;
-    padding: 1rem;
+    /* padding: 1rem; */
     overflow: hidden;
     min-height: 1rem;
+    width: 100%;
     position: fixed;
     top: 9rem;
     z-index: 99999;
@@ -899,7 +895,7 @@ h1 {
   .navigationPills {
     display: block;
     list-style: none;
-    padding: 1rem;
+    /* padding: 1rem; */
     position: relative;
     top: 0.99rem;
     height: 1rem;
@@ -925,7 +921,7 @@ h1 {
     top: 9rem;
     float: right;
     right: 0rem;
-    width: 10rem;
+    width: 7rem;
   }
 
   .subNavIcon {
@@ -939,7 +935,7 @@ h1 {
     border-radius: 2rem;
     position: fixed;
     top: 8.7rem;
-    right: 1rem;
+    right: 2rem;
     margin-top: 1rem;
     color: grey;
     outline: none;

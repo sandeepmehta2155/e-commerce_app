@@ -96,19 +96,13 @@ export default function App() {
   return (
     <>
       <Header />
-      <div
+      <span
         className="bi bi-chat-dots"
         onClick={() =>
           setChatBot((chatBot) => (chatBot === "none" ? "" : "none"))
         }
       >
-        <div className="background"></div>
-        <svg
-          className="chat-bubble"
-          width="100"
-          height="100"
-          viewBox="0 0 100 100"
-        >
+        <svg className="chat-bubble" viewBox="0 0 100 100">
           <path
             className="line line1"
             d="M 30.7873,85.113394       30.7873,46.556405 C 30.7873,41.101961
@@ -126,7 +120,7 @@ export default function App() {
           <circle className="circle circle2" cx="49.9" cy="50.7" r="1.9" />
           <circle className="circle circle3" r="1.9" cy="50.7" cx="57.3" />
         </svg>
-      </div>
+      </span>
       <div
         className="chatBox"
         style={{
