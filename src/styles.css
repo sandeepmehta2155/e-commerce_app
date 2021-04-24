@@ -790,19 +790,19 @@ h1 {
   .bi.bi-cart3 {
     height: 2rem;
     width: 2rem;
-    right: 4.5rem;
+    right: 5rem;
     top: 1.7rem;
   }
   .cartTotalQuantity {
     position: fixed;
-    right: 4.8rem;
+    right: 5.3rem;
     top: 1rem;
   }
   .wishList {
     position: fixed;
     height: 2.5rem;
     width: 2.5rem;
-    right: 6.1rem;
+    right: 7rem;
     top: 1.9rem;
   }
   /* SIDE NAV FOR ROUTING */
