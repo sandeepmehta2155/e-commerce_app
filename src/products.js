@@ -1,5 +1,6 @@
 import { useCart } from "./cart-context";
 import { useState } from "react";
+import * as useComponent from "./index";
 
 export const Products = () => {
   const { itemsInCart, cartDispatch } = useCart();
@@ -152,6 +153,8 @@ export const Products = () => {
             );
           })}
       </ul>
+      <useComponent.BookBatches />
+      <useComponent.FeaturedAuthors />
     </>
   );
 };

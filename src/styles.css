@@ -30,9 +30,16 @@ footer {
   padding: 0.5rem;
   background-color: var(--secondary-color);
 }
+footer {
+  position: relative;
+  margin-top: 5rem;
+  width: 100%;
+}
 header {
   position: fixed;
+  top: 0;
   z-index: 9999;
+  margin: 0;
 }
 h1 {
   text-align: center;
@@ -565,7 +572,59 @@ h1 {
   border: none;
   width: 5rem;
 }
-
+/* CART PAGE */
+.cartCheckOut {
+  border: #333333 1px solid;
+  position: relative;
+  top: 10rem;
+  right: 5rem;
+  float: right;
+  display: block;
+  margin: 0rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+  width: 15rem;
+}
+.cartDetails {
+  border: #333333 1px solid;
+  position: relative;
+  top: 10rem;
+  left: 5rem;
+  display: block;
+  margin: 0rem;
+  margin-bottom: 15rem;
+  padding: 1rem;
+  width: 50rem;
+}
+.cartProduct {
+  border: 1px solid lightgray;
+  padding: 2rem;
+  display: flex;
+}
+.cartImg {
+  border: none;
+  width: 10rem;
+  height: 13rem;
+}
+.cartProductDetails {
+  border: 1px solid lightgray;
+  padding: 1rem;
+  width: 30rem;
+  height: 11rem;
+  margin-left: 3rem;
+}
+.bi.bi-trash {
+  height: 5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  background-color: coral;
+  outline: none;
+  border: coral;
+  border-radius: 0.4rem;
+  position: relative;
+  bottom: 6rem;
+  left: 20rem;
+}
 /* BOOK BATCHES*/
 .bookBatches {
   display: grid;
@@ -592,6 +651,8 @@ h1 {
   width: 100%;
   padding: 2rem;
   overflow: hidden;
+  position: relative;
+  margin-top: 3rem;
 }
 .aboutUs {
   position: relative;
@@ -742,11 +803,13 @@ h1 {
 
 @media (max-width: 670px) {
   header {
+    position: fixed;
     height: 8rem;
   }
   footer {
     width: 100%;
     overflow: hidden;
+    margin-top: 5rem;
   }
   .name {
     font-size: 1.6rem;
@@ -992,10 +1055,12 @@ h1 {
 
   /* FOOTER*/
   .footer {
-    display: list-item;
+    /* display: list-item; */
+    position: relative;
     height: 27rem;
     width: 100%;
     padding: 0;
+    margin-top: 5rem;
   }
 
   .aboutUs {

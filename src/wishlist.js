@@ -4,12 +4,6 @@ export const WishList = () => {
   const { itemsInCart, cartDispatch } = useCart();
   return (
     <>
-      <img
-        src="https://paradigmlife.net/blog/wp-content/uploads/2015/04/Wealth-books-pic-1024x768.jpg"
-        alt="loading..."
-        className="Img"
-      />
-
       <h1>Books in focus</h1>
 
       <ul className="productList">
