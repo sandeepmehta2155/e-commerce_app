@@ -6,75 +6,83 @@ export const WishList = () => {
     <>
       <h1>Books in focus</h1>
 
-      <ul className="productList">
-        {itemsInCart.map((obj) => (
-          <li className="card" key={obj.id} style={{ listStyle: "none" }}>
-            {obj.wishList === "yes" && (
-              <>
-                <div className="card-title">{obj.name}</div>
-
-                <img height="200px" src={obj.src} alt="loading.." />
-                <br />
-                <div>
-                  Rs {obj.price}
-                  <span style={{ margin: ".5rem" }}>
-                    <s>Rs {obj.Originalprice}</s>
-                  </span>
-                  <img
-                    src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"
-                    className="f-assured"
-                    alt="loading"
-                  />
+      <ul className="wishListPage">
+        <h2> Your Wishlist </h2>
+        {itemsInCart.map(
+          (obj) =>
+            obj.wishList === "yes" && (
+              <li key={obj.id} className="wishListProduct">
+                <img
+                  height="200px"
+                  src={obj.src}
+                  alt="loading.."
+                  className="cartImg"
+                />
+                <div className="wishListProductDetails">
+                  <div className="card-title">{obj.name}</div>
+                  <br />
+                  <div>
+                    Rs {obj.price}
+                    <span style={{ margin: ".5rem" }}>
+                      <s>Rs {obj.Originalprice}</s>
+                    </span>
+                    <img
+                      src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"
+                      className="f-assured"
+                      alt="loading"
+                    />
+                  </div>
+                  <br />
+                  <br />
+                  <div>Cart quantity : {obj.quantity} </div>
+                  {obj.quantity === 0 && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-trash"
+                      viewBox="0 0 16 16"
+                      onClick={() => cartDispatch({ type: "increment", obj })}
+                    >
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+                    </svg>
+                  )}
+                  {obj.quantity > 0 && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash"
+                      viewBox="0 0 16 16"
+                      onClick={() =>
+                        cartDispatch({ type: "removeFromCart", obj })
+                      }
+                    >
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                    </svg>
+                  )}
+                  {obj.wishList === "yes" && (
+                    <svg
+                      className="bi bi-wishList"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 25 25"
+                      fill="currentColor"
+                      onClick={() =>
+                        cartDispatch({ type: "removeFromWishList", obj })
+                      }
+                    >
+                      <g>
+                        <path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"></path>
+                      </g>
+                    </svg>
+                  )}
                 </div>
-
-                <button
-                  className="btn btn-primary"
-                  onClick={() => cartDispatch({ type: "increment", obj })}
-                >
-                  +
-                </button>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => cartDispatch({ type: "decrement", obj })}
-                >
-                  -
-                </button>
-                <div>Cart quantity : {obj.quantity} </div>
-                <button
-                  onClick={() => cartDispatch({ type: "removeFromCart", obj })}
-                  className="btn btn-primary"
-                >
-                  Remove from cart
-                </button>
-                {obj.wishList === "yes" && (
-                  <svg
-                    className="filledHeart"
-                    viewBox="2 2 30 30"
-                    onClick={() =>
-                      cartDispatch({ type: "removeFromWishList", obj })
-                    }
-                  >
-                    <g>
-                      <path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"></path>
-                    </g>
-                  </svg>
-                )}
-
-                {obj.wishList === "no" && (
-                  <svg
-                    className="emptyHeart"
-                    viewBox="2 2 30 30"
-                    onClick={() => cartDispatch({ type: "addToWishList", obj })}
-                  >
-                    <g>
-                      <path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.034 11.596 8.55 11.658 1.518-.062 8.55-5.917 8.55-11.658 0-2.267-1.823-4.255-3.903-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.014-.03-1.425-2.965-3.954-2.965z"></path>
-                    </g>
-                  </svg>
-                )}
-              </>
-            )}
-          </li>
-        ))}
+              </li>
+            )
+        )}
       </ul>
     </>
   );

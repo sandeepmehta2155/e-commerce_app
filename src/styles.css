@@ -433,7 +433,8 @@ h1 {
   padding: 0.7rem;
   border: 1px solid white;
 }
-.cartTotalQuantity {
+.cartTotalQuantity,
+.wishListTotalQuantity {
   position: fixed;
   width: 1rem;
   height: 1rem;
@@ -441,11 +442,14 @@ h1 {
   font-size: 0.7em;
   color: white;
   z-index: 99999;
-  right: 6rem;
+  right: 6.3rem;
   top: 1rem;
   background-color: darkorange;
   border: 2px solid white;
   border-radius: 50%;
+}
+.wishListTotalQuantity {
+  right: 11rem;
 }
 
 /* HOME page images */
@@ -585,7 +589,8 @@ h1 {
   padding: 1rem;
   width: 15rem;
 }
-.cartDetails {
+.cartDetails,
+.wishListPage {
   border: #333333 1px solid;
   position: relative;
   top: 10rem;
@@ -596,7 +601,8 @@ h1 {
   padding: 1rem;
   width: 50rem;
 }
-.cartProduct {
+.cartProduct,
+.wishListProduct {
   border: 1px solid lightgray;
   padding: 2rem;
   display: flex;
@@ -606,14 +612,19 @@ h1 {
   width: 10rem;
   height: 13rem;
 }
-.cartProductDetails {
+.cartProductDetails,
+.wishListProductDetails {
   border: 1px solid lightgray;
   padding: 1rem;
   width: 30rem;
   height: 11rem;
   margin-left: 3rem;
 }
-.bi.bi-trash {
+.btn.btn-primary {
+  margin-left: 1.5rem;
+}
+.bi.bi-trash,
+.bi-wishList {
   height: 5rem;
   width: 5rem;
   padding: 0.5rem;
@@ -624,6 +635,20 @@ h1 {
   position: relative;
   bottom: 6rem;
   left: 20rem;
+}
+/*WISHLIST PAGE*/
+.wishListPage {
+  top: 6rem;
+  margin-bottom: 10rem;
+  padding: 1rem;
+  width: 80rem;
+}
+.wishListProductDetails {
+  width: 70rem;
+}
+.bi.bi-wishList {
+  /* position: relative; */
+  left: 27rem;
 }
 /* BOOK BATCHES*/
 .bookBatches {

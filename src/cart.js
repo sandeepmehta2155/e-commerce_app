@@ -42,6 +42,12 @@ export const Cart = () => {
                       <s>Rs {obj.Originalprice}</s>
                     </span>
                   </div>
+                  <img
+                    src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"
+                    className="f-assured"
+                    alt="loading"
+                  />
+
                   <button
                     className="btn btn-primary"
                     onClick={() => cartDispatch({ type: "increment", obj })}

@@ -4,8 +4,12 @@ export function Header() {
   const { itemsInCart } = useCart();
 
   let cartTotalQuantity = 0;
+  let wishListQuantity = 0;
 
-  itemsInCart.map((obj) => (cartTotalQuantity += obj.quantity));
+  itemsInCart.map((obj) => {
+    cartTotalQuantity += obj.quantity;
+    if (obj.wishList === "yes") wishListQuantity++;
+  });
 
   return (
     <>
@@ -37,6 +41,9 @@ export function Header() {
         </svg>
         <div className="cartTotalQuantity">
           <strong>{cartTotalQuantity}</strong>
+        </div>
+        <div className="wishListTotalQuantity">
+          <strong>{wishListQuantity}</strong>
         </div>
       </header>
     </>
