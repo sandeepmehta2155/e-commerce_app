@@ -590,6 +590,7 @@ h1 {
 .footer {
   display: flex;
   width: 100%;
+  padding: 2rem;
   overflow: hidden;
 }
 .aboutUs {
@@ -994,6 +995,7 @@ h1 {
     display: list-item;
     height: 27rem;
     width: 100%;
+    padding: 0;
   }
 
   .aboutUs {
