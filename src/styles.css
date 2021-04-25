@@ -289,15 +289,15 @@ h1 {
   height: 100px;
 }
 .chatFooter {
-  bottom: 0rem;
-  right: 23rem;
+  bottom: 3rem;
+  right: 18rem;
   color: white;
   width: 10rem;
 }
 
 .chatBot {
-  right: 14rem;
-  bottom: 17rem;
+  right: 10rem;
+  bottom: 21rem;
   height: 1.5rem;
   width: 25rem;
   border-radius: 1rem;
@@ -307,8 +307,8 @@ h1 {
 .chatBox {
   background-color: #333333;
   border: 1px solid black;
-  bottom: 2rem;
-  right: 12rem;
+  bottom: 5rem;
+  right: 8rem;
   height: 20rem;
   width: 30rem;
   border-radius: 2rem;
@@ -316,7 +316,7 @@ h1 {
 .chatOuput {
   color: white;
   position: relative;
-  top: 7rem;
+  top: 6rem;
   left: 3rem;
   width: 25rem;
 }
@@ -355,7 +355,7 @@ h1 {
   left: 21.5rem;
   top: 1.4rem;
   height: 2.5rem;
-  width: 733px;
+  width: 50%;
   outline: none;
 }
 
@@ -368,9 +368,12 @@ h1 {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   outline: none;
-  position: fixed;
+  /* position: fixed;
   left: 67.25rem;
-  top: 1.47rem;
+  top: 1.47rem; */
+  position: relative;
+  left: 65%;
+  top: -0.3rem;
 }
 
 .bi.bi-cart3 {
@@ -587,7 +590,7 @@ h1 {
   margin: 0rem;
   margin-bottom: 5rem;
   padding: 1rem;
-  width: 15rem;
+  width: 20%;
 }
 .cartDetails,
 .wishListPage {
@@ -599,7 +602,7 @@ h1 {
   margin: 0rem;
   margin-bottom: 15rem;
   padding: 1rem;
-  width: 50rem;
+  width: 50%;
 }
 .cartProduct,
 .wishListProduct {
@@ -641,7 +644,7 @@ h1 {
   top: 6rem;
   margin-bottom: 10rem;
   padding: 1rem;
-  width: 80rem;
+  width: 80%;
 }
 .wishListProductDetails {
   width: 70rem;
@@ -673,7 +676,7 @@ h1 {
 
 .footer {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   padding: 2rem;
   overflow: hidden;
   position: relative;
@@ -749,15 +752,15 @@ h1 {
     position: fixed;
     left: 18rem;
     top: 1.4rem;
-    width: 400px;
+    width: 30%;
   }
   .navigation {
     top: 5rem;
   }
   .bi.bi-search {
-    position: fixed;
-    left: 688px;
-    top: 1.4rem;
+    position: relative;
+    left: 49%;
+    top: -0.3rem;
   }
   .productList {
     display: grid;
@@ -822,6 +825,19 @@ h1 {
   }
   .badges {
     display: none;
+  }
+  .bi.bi-trash,
+  .bi-wishList {
+    height: 3rem;
+    width: 3rem;
+    outline: none;
+    position: relative;
+    bottom: 6rem;
+    left: 17rem;
+  }
+
+  .bi.bi-wishList {
+    left: 22rem;
   }
 }
 /*Mobile screen */
@@ -1082,13 +1098,60 @@ h1 {
     width: 100%;
     margin: auto;
   }
+  /* CART PAGE */
+  .cartImg {
+    border: none;
+    width: 50%;
+    height: 43%;
+  }
+
+  .bi.bi-trash {
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: -4rem;
+    left: 9rem;
+  }
+  .cartCheckOut {
+    position: relative;
+    top: 15rem;
+    right: 0rem;
+    float: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 7rem;
+    padding: 1rem;
+    width: 50%;
+  }
+  .cartDetails {
+    display: block;
+    margin: 0rem;
+    margin-bottom: 15rem;
+    /* padding: 1rem; */
+    width: 50%;
+  }
+  .cartProduct {
+    display: inline;
+  }
+  .cartProductDetails {
+    padding: 0.5rem;
+    width: 100%;
+    height: 11rem;
+    margin: auto;
+    /* margin-left: 3rem; */
+  }
+
+  .btn.btn-primary {
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+  }
 
   /* FOOTER*/
   .footer {
     /* display: list-item; */
     position: relative;
     height: 27rem;
-    width: 100%;
+    /* width: 100%; */
     padding: 0;
     margin-top: 5rem;
   }
