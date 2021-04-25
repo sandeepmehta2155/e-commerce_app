@@ -484,7 +484,7 @@ h1 {
   color: white;
   margin: 0;
   padding: 1rem;
-  width: 100%;
+  width: 98%;
   position: fixed;
   z-index: 9999;
   top: 5rem;
@@ -887,6 +887,11 @@ h1 {
     right: 5.3rem;
     top: 1rem;
   }
+  .wishListTotalQuantity {
+    position: fixed;
+    right: 8.5rem;
+    top: 1rem;
+  }
   .wishList {
     position: fixed;
     height: 2.5rem;
@@ -990,7 +995,7 @@ h1 {
     /* padding: 1rem; */
     overflow: hidden;
     min-height: 1rem;
-    width: 100%;
+    width: 98%;
     position: fixed;
     top: 9rem;
     z-index: 99999;
