@@ -401,6 +401,7 @@ h1 {
   right: 1rem;
   text-align: center;
   width: 2.5rem;
+
   height: 2.5rem;
   border: white 2px solid;
   border-radius: 50%;
@@ -423,11 +424,12 @@ h1 {
 .optionSetNone {
   display: none;
 }
-
 .optionSet.pills {
   list-style: none;
+
   position: relative;
   height: 1rem;
+
   margin: 4rem;
   opacity: 1;
 }
@@ -475,7 +477,7 @@ h1 {
   top: 10rem;
 }
 
-/*MAIN NAVIGATION BAR */
+/* MAIN NAVIGATION BAR */
 .dropdownIcon,
 .dropdownIconResponsive {
   display: none;
@@ -661,6 +663,7 @@ h1 {
 }
 
 .bookBatchPills {
+  width: 95%;
   border: none;
 }
 
@@ -835,7 +838,14 @@ h1 {
     bottom: 6rem;
     left: 17rem;
   }
-
+  .bi.bi-trash {
+    height: 2rem;
+    width: 2rem;
+    outline: none;
+    position: relative;
+    bottom: 1rem;
+    left: 10rem;
+  }
   .bi.bi-wishList {
     left: 22rem;
   }
@@ -1095,23 +1105,11 @@ h1 {
   }
 
   .bookBatchPills {
-    width: 100%;
+    width: 80%;
     margin: auto;
   }
   /* CART PAGE */
-  .cartImg {
-    border: none;
-    width: 50%;
-    height: 43%;
-  }
 
-  .bi.bi-trash {
-    height: 1rem;
-    width: 1rem;
-    position: relative;
-    top: -4rem;
-    left: 9rem;
-  }
   .cartCheckOut {
     position: relative;
     top: 15rem;
@@ -1123,17 +1121,27 @@ h1 {
     padding: 1rem;
     width: 50%;
   }
-  .cartDetails {
+  .cartDetails,
+  .wishListPage {
     display: block;
     margin: 0rem;
     margin-bottom: 15rem;
     /* padding: 1rem; */
     width: 50%;
   }
-  .cartProduct {
+  .cartProduct,
+  .wishListProduct {
     display: inline;
+    border: none;
   }
-  .cartProductDetails {
+  .cartImg {
+    border: none;
+    width: 50%;
+    height: 43%;
+  }
+  .cartProductDetails,
+  .wishListProductDetails {
+    border: none;
     padding: 0.5rem;
     width: 100%;
     height: 11rem;
@@ -1141,11 +1149,26 @@ h1 {
     /* margin-left: 3rem; */
   }
 
+  .bi.bi-trash,
+  .bi-wishList {
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: -4rem;
+    left: 9rem;
+  }
+
   .btn.btn-primary {
     padding: 0.2rem;
     margin-left: 0.5rem;
   }
-
+  /* WISHLIST PAGE */
+  .wishListPage {
+    top: 10rem;
+  }
+  .bi.bi-wishList {
+    left: 0rem;
+  }
   /* FOOTER*/
   .footer {
     /* display: list-item; */
