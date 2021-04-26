@@ -55,7 +55,7 @@ const itemsInCart = [
   },
   {
     id: 4,
-    name: "Taxmann's Stock Market Wisdom",
+    name: "Taxmann's Stock Market....",
     Originalprice: 725,
     price: 604,
     quantity: 0,

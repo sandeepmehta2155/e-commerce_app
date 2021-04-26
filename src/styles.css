@@ -558,6 +558,8 @@ h1 {
   top: 8rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  margin-bottom: 15rem;
 }
 .list.list-group-item {
   border: none;
@@ -566,21 +568,73 @@ h1 {
   position: relative;
   top: 10rem;
 }
+.productCard {
+  border: 1px lightgray solid;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 4rem;
+  height: 33rem;
+  overflow: hidden;
+}
+.card-title {
+  margin: 0.8rem;
+}
+.cardProductDetails {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.cardProductDetails:hover {
+  position: relative;
+  text-shadow: 0 0 1px #ff0000;
+  bottom: 0.51rem;
+  left: 1rem;
+}
+.cartAndWishlistButtons {
+  align-self: flex-end;
+  margin: auto;
+}
 
 .emptyHeart,
 .filledHeart {
-  height: 4rem;
-  width: 4rem;
-  fill: var(--primary-color);
+  height: 2rem;
+  width: 2rem;
+  fill: red;
   position: relative;
-  top: 2rem;
-  left: 5rem;
+  top: 1.3rem;
+  left: 2rem;
 }
 
-.f-assured {
-  border: none;
-  width: 5rem;
+.fBadge {
+  text-align: center;
+  font-size: 1rem;
+  color: coral;
+  background-color: #2874f0;
+  border: 2px solid coral;
+  padding: 0.5rem;
+  width: 1rem;
+  font-weight: bold;
+  height: 1rem;
+  border-radius: 50%;
+  position: relative;
+  top: 0rem;
+  left: 1.8rem;
 }
+.fBadge.Text {
+  border: none;
+  color: white;
+  background-color: coral;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  position: relative;
+  top: -1.7rem;
+  left: -0.9rem;
+  border-radius: 0.9rem;
+}
+
 /* CART PAGE */
 .cartCheckOut {
   border: #333333 1px solid;
