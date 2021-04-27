@@ -7,7 +7,7 @@ import { Products } from "./products";
 import { Cart } from "./cart";
 import { WishList } from "./wishlist";
 
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Link, Route, Routes } from "react-router-dom";
 
 export default function App() {
   const [mode, setMode] = useState("bodyLite");
@@ -47,31 +47,31 @@ export default function App() {
         </div>
 
         <ul className={options}>
-          <Link to="/">
+          <NavLink to="/">
             <li key={"home"} className="optionSet pills">
               Home
             </li>
-          </Link>
-          <Link to="/login">
+          </NavLink>
+          <NavLink to="/login">
             <li key={"Login"} className="optionSet pills">
               Login
             </li>
-          </Link>
-          <Link to="/">
+          </NavLink>
+          <NavLink to="/">
             <li key={"Products"} className="optionSet pills">
               Products
             </li>
-          </Link>
-          <Link to="/cart">
+          </NavLink>
+          <NavLink to="/cart">
             <li key={"Cart"} className="optionSet pills">
               Cart
             </li>
-          </Link>
-          <Link to="/wishlist">
+          </NavLink>
+          <NavLink to="/wishlist">
             <li key={"WishList"} className="optionSet pills">
               WishList
             </li>
-          </Link>
+          </NavLink>
         </ul>
 
         <button
