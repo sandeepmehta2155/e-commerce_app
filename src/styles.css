@@ -1005,7 +1005,7 @@ h1 {
 }
 
 .fBadge {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   color: coral;
   background-color: #2874f0;
@@ -1027,7 +1027,7 @@ h1 {
   padding: 0.2rem;
   position: relative;
   top: -1.7rem;
-  left: -0.9rem;
+  left: -1.3rem;
   border-radius: 0.9rem;
 }
 
@@ -1540,6 +1540,14 @@ h1 {
     position: relative;
     bottom: 0rem;
     left: 0rem;
+  }
+  .fBadge {
+    text-align: left;
+  }
+  .fBadge.Text {
+    position: relative;
+    top: -1.7rem;
+    left: -0.6rem;
   }
 
   /* BOOK BATCHES*/
