@@ -36,7 +36,7 @@ export const WishList = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      className="bi bi-trash"
+                      className="wishList bi-trash"
                       viewBox="0 0 16 16"
                       onClick={() => cartDispatch({ type: "increment", obj })}
                     >
@@ -49,7 +49,7 @@ export const WishList = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-trash"
+                      class="wishList bi-trash"
                       viewBox="0 0 16 16"
                       onClick={() =>
                         cartDispatch({ type: "removeFromCart", obj })
@@ -60,7 +60,7 @@ export const WishList = () => {
                   )}
                   {obj.wishList === "yes" && (
                     <svg
-                      className="bi bi-wishList"
+                      className="wishList bi-wishList"
                       width="16"
                       height="16"
                       viewBox="0 0 25 25"
