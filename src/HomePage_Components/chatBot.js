@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 export function ChatBot() {
   const [chatBot, setChatBot] = useState("none");
   const [chat, setChat] = useState("");
-  const [chatOutput, setChatOutput] = useState("");
+  // const [chatOutput, setChatOutput] = useState("");
   useEffect(() => {
-    axios
-      .get("https://breaking-bad-quotes.herokuapp.com/v1/quotes/5")
-      .then((res) => {
-        setChatOutput(res.data[0].quote);
-      });
+    // axios
+    //   .get("https://breaking-bad-quotes.herokuapp.com/v1/quotes/5")
+    //   .then((res) => {
+    //     setChatOutput(res.data[0].quote);
+    //   });
   }, [chat]);
 
   return (
@@ -53,7 +53,7 @@ export function ChatBot() {
             e.key === "Enter" ? setChat(e.target.value) : setChat("")
           }
         />
-        <div className="chatOuput">{chatOutput}</div>
+        {/* <div className="chatOuput">{chatOutput}</div>
         <div className="chatFooter">
           This is just for fun
           <span role="img" aria-labelledby="smiley">
@@ -61,7 +61,7 @@ export function ChatBot() {
           </span>
           <div />
           Please don't mind
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -355,7 +355,7 @@ h1 {
   left: 21.5rem;
   top: 1.4rem;
   height: 2.5rem;
-  width: 50%;
+  width: 100.4vh;
   outline: none;
 }
 
@@ -372,7 +372,7 @@ h1 {
   left: 67.25rem;
   top: 1.47rem; */
   position: relative;
-  left: 65%;
+  left: 134.5vh;
   top: -0.3rem;
 }
 
@@ -1056,10 +1056,17 @@ h1 {
   padding: 1rem;
   width: 50%;
 }
+.cartDetails {
+  margin: 0;
+  position: relative;
+  display: block;
+  margin-bottom: 15rem;
+}
 .cartProduct,
 .wishListProduct {
   border: 1px solid lightgray;
   padding: 2rem;
+
   display: flex;
 }
 .cartImg {
@@ -1290,12 +1297,13 @@ h1 {
     bottom: 6rem;
     left: 17rem;
   }
-  .bi.bi-trash {
+  .wishList.bi-trash,
+  .bi-wishList {
     height: 2rem;
     width: 2rem;
     outline: none;
     position: relative;
-    bottom: 1rem;
+    top: -7rem;
     left: 10rem;
   }
   .bi.bi-wishList {
@@ -1613,9 +1621,13 @@ h1 {
     margin: auto;
     /* margin-left: 3rem; */
   }
+  .wishListProductDetails {
+    height: 15rem;
+  }
 
   .bi.bi-trash,
-  .bi-wishList {
+  .bi-wishList,
+  .wishList.bi-trash {
     height: 1rem;
     width: 1rem;
     position: relative;
@@ -1650,7 +1662,7 @@ h1 {
     border-radius: 0.4rem;
     z-index: 1;
     left: 0rem;
-    top: -4.2rem;
+    top: 0rem;
   }
 
   /* FOOTER*/
@@ -1678,12 +1690,17 @@ h1 {
   }
   .keepInTouch {
     position: relative;
-    left: 1rem;
-    top: 2rem;
+    width: 9rem;
+    left: -6rem;
+    top: 11rem;
   }
   .bi-twitter,
   .bi-linkedin,
   .bi-github {
+    /* position: relative;
+    left: 0rem;
+    top: 8rem; */
+
     width: 1rem;
     height: 1rem;
     margin: 0.5rem 0.5rem;

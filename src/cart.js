@@ -1,4 +1,5 @@
 import { useCart } from "./cart-context";
+
 export const Cart = () => {
   const { itemsInCart, cartDispatch } = useCart();
   let cartTotalQuantity = 0;
@@ -67,7 +68,7 @@ export const Cart = () => {
                     onClick={() =>
                       cartDispatch({ type: "removeFromCart", obj })
                     }
-                    className="bi bi-trash"
+                    className="wishList bi-trash"
                   >
                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
                     <path
