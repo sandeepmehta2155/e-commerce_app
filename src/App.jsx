@@ -41,7 +41,7 @@ export default function App() {
               ? setOptions("optionSetNone")
               : setOptions("optionSet")
           }
-          style={{ color: "white" }}
+          style={{ color: "black" }}
         >
           &#9776;
         </div>
