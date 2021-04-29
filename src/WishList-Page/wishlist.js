@@ -1,11 +1,9 @@
-import { useCart } from "./cart-context";
+import { useCart } from "../Cart-Page/cart-context";
 
 export const WishList = () => {
   const { itemsInCart, cartDispatch } = useCart();
   return (
     <>
-      <h1>Books in focus</h1>
-
       <ul className="wishListPage">
         <h2> Your Wishlist </h2>
         {itemsInCart.map(

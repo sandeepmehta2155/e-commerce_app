@@ -467,7 +467,7 @@ h1 {
 .Img {
   position: relative;
   display: block;
-  top: 8.5rem;
+  top: 7.1rem;
   width: 100%;
   height: 45rem;
   border: 3px solid black;
@@ -490,12 +490,13 @@ h1 {
 }
 
 .navigation {
+  padding-inline-start: 0;
   display: block;
   background-color: #333333;
   color: white;
   margin: 0;
-  padding: 1rem;
-  width: 98%;
+  /* padding: 1rem; */
+  width: 100%;
   position: fixed;
   z-index: 9999;
   top: 5rem;
@@ -509,6 +510,11 @@ h1 {
 
 .navigationPills,
 .navigationPillsResponsive {
+  background-color: #333333;
+  color: white;
+  font-size: 1rem;
+  list-style: none;
+  border: none;
   display: inline;
   padding: 1rem;
 }
@@ -569,11 +575,17 @@ h1 {
   height: 20px;
   /* margin: 50px auto; */
 }
-
+.heartButton {
+  background-color: white;
+  border: none;
+  /* width: 5rem; */
+  position: relative;
+}
 .heart {
   fill: #aabbc2;
   width: 20px;
   height: 20px;
+  background-color: none;
   /* display: block; */
   position: relative;
   z-index: 1;
@@ -581,6 +593,7 @@ h1 {
 
 .active .heart {
   fill: #ff4d70;
+  background-color: none;
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-animation: heart 1s cubic-bezier(0.5, 0.1, 0.7, 0.8) 0.3s forwards;
@@ -597,6 +610,7 @@ h1 {
   top: 5px;
   left: 5px;
   border: 5px solid #e2264d;
+  background-color: none;
 }
 
 .active .circleheart {
@@ -1049,7 +1063,7 @@ h1 {
 .wishListPage {
   border: #333333 1px solid;
   position: relative;
-  top: 10rem;
+  top: 12rem;
   left: 5rem;
   display: block;
   margin: auto;
@@ -1061,7 +1075,7 @@ h1 {
   margin: 0;
   position: relative;
   display: block;
-  margin-bottom: 15rem;
+  margin-bottom: 20rem;
 }
 .cartProduct,
 .wishListProduct {
@@ -1103,8 +1117,8 @@ h1 {
 }
 /*WISHLIST PAGE*/
 .wishListPage {
-  top: 6rem;
-  margin-bottom: 10rem;
+  top: 12rem;
+  margin-bottom: 15rem;
   padding: 1rem;
   width: 80%;
 }
@@ -1136,17 +1150,6 @@ h1 {
   margin: auto;
 }
 /* FOOTER*/
-.filterAndSort {
-  margin-inline-start: 0px;
-
-  padding-inline-start: 0px;
-  display: block;
-  position: fixed;
-  bottom: 0;
-  background-color: #333333;
-  width: 100%;
-  z-index: 999999;
-}
 
 .footer {
   display: flex;
@@ -1210,7 +1213,9 @@ h1 {
   bottom: 1rem;
   left: 1rem;
 }
-
+.filterAndSort {
+  display: none;
+}
 /* MPDI SCREENS */
 @media (max-width: 1280px) {
   .Img {
@@ -1384,24 +1389,24 @@ h1 {
     position: absolute;
     height: 2rem;
     width: 2rem;
-    right: 3.2rem;
+    right: 3.8rem;
     top: 1.5rem;
   }
   .cartTotalQuantity {
     position: absolute;
-    right: 4.75rem;
+    right: 5rem;
     top: 0.87rem;
   }
   .wishListTotalQuantity {
     position: absolute;
-    right: 8rem;
+    right: 7.7rem;
     top: 1rem;
   }
   .wishList {
     position: absolute;
     height: 2.5rem;
     width: 2.5rem;
-    right: 5.3rem;
+    right: 5.6rem;
     top: 1.9rem;
   }
   /* SIDE NAV FOR ROUTING */
@@ -1410,7 +1415,7 @@ h1 {
     position: fixed;
     width: 2rem;
     height: 2rem;
-    right: 1.2rem;
+    right: 1.6rem;
     align-content: center;
     font-size: 1.4rem;
   }
@@ -1467,7 +1472,7 @@ h1 {
   .Img {
     width: 100%;
     height: 20rem;
-    top: 3.1rem;
+    top: 1.7rem;
   }
 
   .filters {
@@ -1478,31 +1483,34 @@ h1 {
   .dropdownIcon {
     display: list-item;
     list-style: none;
-    position: fixed;
+    position: absolute;
     color: white;
-    top: 9.65rem;
+    background-color: #333333;
+    top: 0.8rem;
     left: 1.5rem;
-    z-index: 9999;
+    z-index: 9990099999;
   }
   .dropdownIconResponsive {
     display: list-item;
     list-style: none;
     position: absolute;
+    background-color: #333333;
     color: white;
-    top: 0.75rem;
+    top: 0.8rem;
     left: 1.5rem;
     z-index: 9990099999;
   }
 
   .navigation {
+    padding-inline-start: 0;
     display: block;
     background-color: #333333;
     color: white;
     margin: 0;
     /* padding: 1rem; */
-    overflow: hidden;
-    min-height: 1rem;
-    width: 94.5%;
+    /* overflow: scroll; */
+    min-height: 3rem;
+    width: 100%;
     position: absolute;
     top: 9rem;
     z-index: 99999;
@@ -1511,13 +1519,16 @@ h1 {
   .navigationPills {
     display: block;
     list-style: none;
-    /* padding: 1rem; */
+    padding: 1rem;
     position: relative;
-    top: 0.99rem;
-    height: 1rem;
+    top: 2.5rem;
+    left: 1rem;
+    /* height: 1rem; */
+    /* overflow: scroll; */
     left: 0rem;
-    width: 7rem;
+    width: 50%;
     z-index: 99999;
+    text-align: left;
   }
   .navigationPillsResponsive {
     display: none;
@@ -1532,12 +1543,12 @@ h1 {
     color: black;
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     z-index: 99999;
     top: 9rem;
     float: right;
     right: 0rem;
-    width: 100%;
+    width: 50%;
   }
 
   .subNavIcon {
@@ -1561,11 +1572,27 @@ h1 {
   .productList {
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+    padding-inline-start: 0;
+    align-content: center;
+    justify-items: center;
+    margin-bottom: 10rem;
   }
-
+  .productsHead {
+    position: relative;
+    top: 5rem;
+  }
   .f-assured {
     border: none;
     width: 3rem;
+  }
+  .productCard {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: 1rem;
+    border: 1px solid gray;
   }
   .cardProductDetails:hover {
     position: relative;
@@ -1590,14 +1617,15 @@ h1 {
   }
 
   .bookBatchPills {
-    width: 80%;
+    width: 95%;
+
     margin: auto;
   }
   /* CART PAGE */
 
   .cartCheckOut {
     position: relative;
-    top: 15rem;
+    top: 5rem;
     right: 0rem;
     float: none;
     display: block;
@@ -1617,6 +1645,9 @@ h1 {
     width: 80%;
   }
   .cartDetails {
+    position: relative;
+    top: 0rem;
+    margin-bottom: 2rem;
     border: none;
     width: 95%;
   }
@@ -1663,11 +1694,12 @@ h1 {
   }
   /* WISHLIST PAGE */
   .wishListPage {
-    top: 7rem;
+    top: 3rem;
     padding: 0rem;
     border: none;
     overflow: hidden;
     width: 100%;
+    margin-bottom: 5rem;
   }
 
   .wishList.bi-wishList,
@@ -1737,5 +1769,69 @@ h1 {
 
   .spanTxt {
     display: none;
+  }
+  .filterAndSort {
+    margin-inline-start: 0px;
+    color: white;
+    padding-inline-start: 0px;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    text-align: center;
+    bottom: 0;
+    background-color: #333333;
+    width: 100%;
+    z-index: 999999;
+  }
+  .bi.bi-sort-down,
+  .bi-filter {
+    width: 50%;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid grey;
+    background-color: #333333;
+    /* text-align: center; */
+  }
+  .filterBox {
+    position: fixed;
+    margin: 0;
+    color: white;
+    text-align: center;
+    bottom: 3.35rem;
+    opacity: 0.85;
+    z-index: 9999999;
+    width: 100%;
+    background-color: #333333;
+  }
+  .filterFooter {
+    margin: 1rem;
+  }
+  .slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: coral;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
   }
 }

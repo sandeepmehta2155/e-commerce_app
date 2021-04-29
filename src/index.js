@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import { CartProvider } from "./cart-context";
+import { CartProvider } from "./Cart-Page/cart-context";
+import { FilterProvider } from "./Products-Page/filter-context";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
@@ -15,9 +16,11 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
     <Router>
-      <CartProvider>
-        <App />
-      </CartProvider>
+      <FilterProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </FilterProvider>
     </Router>
   </StrictMode>,
   rootElement
