@@ -1,4 +1,4 @@
-import { useCart } from "../cart-context";
+import { useCart } from "../Cart-Page/cart-context";
 
 export function Header() {
   const { itemsInCart } = useCart();

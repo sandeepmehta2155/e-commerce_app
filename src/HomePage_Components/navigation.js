@@ -76,18 +76,18 @@ export function Navigation() {
     <>
       <ul className="navigation">
         {listItems.map((obj) => (
-          <li
-            onMouseOver={() => setsubCategory(obj.category)}
+          <button
             className={navigationPills}
-            key={obj.id}
+            onMouseOver={() => setsubCategory(obj.category)}
           >
-            {obj.category}
+            <li key={obj.id}>
+              {obj.category}
 
-            <label className="subNavIcon">{obj.subNavIcon}</label>
-          </li>
+              <label className="subNavIcon">{obj.subNavIcon}</label>
+            </li>
+          </button>
         ))}
-        <li
-          key="&#9776"
+        <button
           className={dropdownIcon}
           onClick={() => {
             dropdownIcon === "dropdownIcon"
@@ -95,8 +95,8 @@ export function Navigation() {
               : setdropdownIcon("dropdownIcon");
           }}
         >
-          &#9776;
-        </li>
+          <li key="&#9776">&#9776;</li>
+        </button>
       </ul>
       <ul className="subNav">
         {listItems.map(
