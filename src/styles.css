@@ -1160,19 +1160,36 @@ h1 {
 }
 
 /*LOGIN PAGE*/
-.modal1 {
+
+.modalForLogin,
+.modalForSubscription {
   position: relative;
   top: 8rem;
-  /* left:2rem; */
+  border: 1px solid gray;
   text-align: center;
   margin: auto;
   width: 40%;
   margin-bottom: 10rem;
-  border: 1px solid gray;
 }
 
-/* FOOTER*/
+.modal1,
+.modalForSubscription input {
+  float: right;
+  margin-right: 20%;
+}
+.modal1,
+.modalForSubscription #check {
+  float: left;
+  margin: 0.255rem;
+  margin-left: 1rem;
+}
+.modal1,
+.modalForSubscription label {
+  float: left;
+  margin-left: 20%;
+}
 
+/*Footer*/
 .footer {
   display: flex;
   /* width: 100%; */

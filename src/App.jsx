@@ -4,12 +4,8 @@ import * as useComponent from "./index";
 import "./styles.css";
 import { useTheme } from "./HomePage_Components/theme-context";
 
-import { Products } from "./Products-Page/products";
-import { Cart } from "./Cart-Page/cart";
-import { WishList } from "./WishList-Page/wishlist";
-
 import { Route, Routes } from "react-router-dom";
-import { PrivateRoute } from "./Login-Page/PrivateRoute";
+import { Login } from "./Login-Page/Login";
 
 export default function App() {
   const { mode } = useTheme();
@@ -61,10 +57,15 @@ export default function App() {
       </div> */}
 
         <Routes>
-          <Route path="/" element={<Products />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/wishlist" element={<WishList />} />
-          <Route path="/login" element={<PrivateRoute />} />
+          <Route path="/" element={<useComponent.Products />} />
+          <Route path="/cart" element={<useComponent.Cart />} />
+          <Route path="/wishlist" element={<useComponent.WishList />} />
+          <Route path="/login" element={<useComponent.Login />} />
+          <Route path="/subscription" element={<useComponent.Subscription />} />
+          <useComponent.PrivateRoute
+            path="/profile"
+            element={<useComponent.UserProfile />}
+          />
         </Routes>
 
         <useComponent.Footer />
