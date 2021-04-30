@@ -48,9 +48,14 @@ export function FrontPageRoutes() {
             Home
           </li>
         </NavLink>
+        <NavLink to="/profile">
+          <li key={"user"} className="optionSet pills">
+            User Profile
+          </li>
+        </NavLink>
         <NavLink to="/login">
           <li key={"Login"} className="optionSet pills">
-            Login
+            Login / Sign Up
           </li>
         </NavLink>
         <NavLink to="/">

@@ -39,8 +39,10 @@ export function Login() {
         }
       });
 
-    setUserLogin((isUserLoggedIn) => !isUserLoggedIn);
-    navigate(state?.from ? state.from : "/");
+    if (setUserExists === "none" && loginStatus === "yes") {
+      setUserLogin((isUserLoggedIn) => !isUserLoggedIn);
+      navigate(state?.from ? state.from : "/");
+    }
   }
   return (
     <div className="modalForLogin">
