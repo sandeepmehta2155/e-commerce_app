@@ -4,9 +4,6 @@ import axios from "axios";
 import { useAuth } from "./auth-context";
 
 export function Subscription() {
-  const { check } = useAuth();
-  console.log(check);
-
   const [firstNameAndLastName, setFirstNameAndLastName] = useState("");
   const [passwordReInput, setpasswordReInput] = useState("");
   const [userName, setUserName] = useState("");
@@ -30,6 +27,8 @@ export function Subscription() {
   function CheckAuth() {
     if (usersFromDataBase)
       usersFromDataBase.find(({ username, email }) => {
+        setUserExists("none");
+        setEmailExists("none");
         switch (username) {
           case userName:
             setUserExists("block");
@@ -46,10 +45,32 @@ export function Subscription() {
         }
       });
   }
+
+  async function PostData() {
+    setTimeout(() => {
+      if (
+        firstNameAndLastName &&
+        emailExists === "none" &&
+        userExists === "none" &&
+        reg.test(passwordInput) &&
+        passwordInput === passwordReInput
+      )
+        console.log("Signup");
+      else console.log("Data not added");
+    }, 3000);
+  }
   return (
     <div className="modalForSubscription">
       <h2 style={{ color: "coral" }}>Subscribe</h2>
-      {/* {console.log("user exists in 44 : ", userExists)} */}
+      {/* {console.log("user exists in 52 : ", userExists)} */}
+      {/* {console.log(
+        "email : ",
+        emailExists,
+        " | user exists in 56 : ",
+        userExists,
+        "| type : ",
+        type
+      )} */}
       <label>Enter your name : </label>
       <input
         type="text"
@@ -126,7 +147,7 @@ export function Subscription() {
       {passwordReInput && (
         <div>
           {passwordReInput !== passwordInput && (
-            <div> Error! Try matching it </div>
+            <div style={{ color: "red" }}> Error! Try matching password </div>
           )}
         </div>
       )}
@@ -137,9 +158,7 @@ export function Subscription() {
       <button
         className="btn btn-primary"
         onClick={() => {
-          setUserExists("none");
-          setEmailExists("none");
-
+          PostData();
           CheckAuth();
         }}
       >
