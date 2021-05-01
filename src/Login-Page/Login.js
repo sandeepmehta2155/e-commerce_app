@@ -1,53 +1,48 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "./auth-context";
 
 export function Login() {
-  const [usersFromDataBase, setUsersFromDataBase] = useState("");
+  const [checkUsersFromDataBase, setResponseFromDataBase] = useState("");
   const [userName, setUserName] = useState("");
   const [passwordInput, setUserPassword] = useState("");
   const [userExists, setUserExists] = useState("none");
-  const [loginStatus, setloginStatus] = useState("no");
+  const [usersDB, setUsersDB] = useState();
 
-  const { isUserLoggedIn, setUserLogin } = useAuth();
-  const { state } = useLocation();
-  const navigate = useNavigate();
+  const { isUserLoggedIn, LogOut, setUserLogin } = useAuth();
 
   useEffect(() => {
     axios
       .get("https://e-commerce.sandeepmehta215.repl.co/login")
-      .then((response) => setUsersFromDataBase(response.data.users));
+      .then((response) => setUsersDB(response.data.users));
   }, []);
 
   function CheckAuth() {
-    if (usersFromDataBase)
-      usersFromDataBase.find(({ username, password }) => {
-        switch (username) {
-          case userName:
-            setUserExists("none");
-            break;
-          default:
-            break;
-        }
-        switch (password) {
-          case passwordInput:
-            setloginStatus("yes");
-            break;
-          default:
-            break;
-        }
-      });
-
-    if (setUserExists === "none" && loginStatus === "yes") {
-      setUserLogin((isUserLoggedIn) => !isUserLoggedIn);
-      navigate(state?.from ? state.from : "/");
-    }
+    if (userExists)
+      usersDB.map((obj) =>
+        obj.username === userName
+          ? setUserExists("none")
+          : setUserExists("block")
+      );
+    if (userExists === "none")
+      axios
+        .post("https://e-commerce.sandeepmehta215.repl.co/userauth", {
+          username: userName,
+          password: passwordInput
+        })
+        .then((response) => {
+          response.data.message === "auth worked for user"
+            ? setUserLogin(true)
+            : setUserLogin(false);
+          return setResponseFromDataBase(response);
+        });
   }
+
   return (
     <div className="modalForLogin">
       <h2 style={{ color: "coral" }}>Login</h2>
-      {/* {console.log("user exists in 44 : ", userExists, loginStatus)} */}
+
       <label>Enter your user-name : </label>
       <input
         type="text"
@@ -70,18 +65,32 @@ export function Login() {
       />
       <br />
       <br />
+      {checkUsersFromDataBase.data?.message ===
+        "auth didn't worked for user" && (
+        <small style={{ color: "red" }}>Enter Correct Password</small>
+      )}
+      <br />
+      <br />
       <br />
       {/* {console.log("login password : ", loginStatus)} */}
-      <button
-        className="btn btn-primary"
-        onClick={() => {
-          setUserExists("block");
-          setloginStatus("no");
-          CheckAuth();
-        }}
-      >
-        {isUserLoggedIn ? "logout" : "login"}
-      </button>
+
+      {!isUserLoggedIn && (
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            CheckAuth();
+          }}
+        >
+          Login
+        </button>
+      )}
+      {isUserLoggedIn && (
+        <button className="btn btn-primary" onClick={() => LogOut()}>
+          {" "}
+          LogOut{" "}
+        </button>
+      )}
+
       <Link to="/subscription">
         <button className="btn btn-primary">Sign Up</button>
       </Link>
