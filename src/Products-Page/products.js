@@ -112,6 +112,8 @@ export const Products = () => {
                     )}
 
                     <br />
+                    <br />
+                    <br />
                     <div className="card-title">{obj.name}</div>
                     <div>
                       Rs {obj.price}

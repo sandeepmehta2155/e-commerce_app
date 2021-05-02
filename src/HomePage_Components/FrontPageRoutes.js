@@ -73,6 +73,11 @@ export function FrontPageRoutes() {
             <li key={"WishList"}>WishList</li>
           </button>
         </NavLink>
+        <NavLink to="/feedback">
+          <button className="optionSet pills">
+            <li key={"feedback"}>Feedback</li>
+          </button>
+        </NavLink>
       </ul>
 
       <button
