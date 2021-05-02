@@ -1140,6 +1140,23 @@ h1 {
   /* position: relative; */
   left: 27rem;
 }
+.cartbi-trashButton,
+.wishList.bi-trash {
+  background-color: coral;
+  outline: none;
+  border: coral;
+
+  border-radius: 0.4rem;
+  position: relative;
+  top: -5.5rem;
+  left: 20rem;
+  z-index: 1;
+}
+.wishList.bi-trash {
+  position: relative;
+  top: 0rem;
+  left: 0rem;
+}
 /* BOOK BATCHES*/
 .bookBatches {
   display: grid;

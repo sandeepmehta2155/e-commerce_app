@@ -58,7 +58,7 @@ export const Cart = () => {
                   </button>
                   <div>Cart quantity : {obj.quantity} </div>
                   <button
-                    className="wishListbi-trashButton"
+                    className="cartbi-trashButton"
                     onClick={() =>
                       cartDispatch({ type: "removeFromCart", obj })
                     }
