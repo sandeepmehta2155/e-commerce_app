@@ -44,49 +44,9 @@ export const Products = () => {
                 key={obj.id}
                 style={{ listStyle: "none" }}
               >
-                <div className="card-title">{obj.name}</div>
                 <div className="cardProductDetails">
                   <div>
-                    <img
-                      className="cardImage"
-                      height="200px"
-                      src={obj.src}
-                      alt="loading.."
-                    />
-                    <br />
-                    <div>
-                      Rs {obj.price}
-                      <span style={{ margin: ".5rem" }}>
-                        <s>Rs {obj.Originalprice}</s>
-                      </span>
-                    </div>
-
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => cartDispatch({ type: "increment", obj })}
-                    >
-                      +
-                    </button>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => cartDispatch({ type: "decrement", obj })}
-                    >
-                      -
-                    </button>
-                    <div>Cart quantity : {obj.quantity} </div>
-                  </div>
-                  <div className="cartAndWishlistButtons">
-                    <div className="fBadge">f</div>
-                    <label className="fBadge Text">Assured</label>
-                    <br />
-                    <button
-                      onClick={() =>
-                        cartDispatch({ type: "removeFromCart", obj })
-                      }
-                      className="btn btn-primary"
-                    >
-                      Remove from cart
-                    </button>
+                    <img className="cardImage" src={obj.src} alt="loading.." />
                     {obj.wishList === "yes" && (
                       <span
                         className="love active"
@@ -150,6 +110,22 @@ export const Products = () => {
                         </button>
                       </span>
                     )}
+
+                    <br />
+                    <div className="card-title">{obj.name}</div>
+                    <div>
+                      Rs {obj.price}
+                      <span style={{ margin: ".5rem" }}>
+                        <s>Rs {obj.Originalprice}</s>
+                      </span>
+                    </div>
+                  </div>
+                  <br />
+                  <div className="cartAndWishlistButtons">
+                    <div className="fBadge">f</div>
+                    <label className="fBadge Text">Assured</label>
+                    <br />
+
                     {/* {obj.wishList === "yes" && (
                       <svg
                         className="filledHeart"

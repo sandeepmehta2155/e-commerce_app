@@ -15,7 +15,7 @@ export function ChatBot() {
 
   return (
     <>
-      <span
+      {/* <span
         className="bi bi-chat-dots"
         onClick={() =>
           setChatBot((chatBot) => (chatBot === "none" ? "" : "none"))
@@ -52,8 +52,8 @@ export function ChatBot() {
           onKeyDown={(e) =>
             e.key === "Enter" ? setChat(e.target.value) : setChat("")
           }
-        />
-        {/* <div className="chatOuput">{chatOutput}</div>
+        /> */}
+      {/* <div className="chatOuput">{chatOutput}</div>
         <div className="chatFooter">
           This is just for fun
           <span role="img" aria-labelledby="smiley">
@@ -62,7 +62,7 @@ export function ChatBot() {
           <div />
           Please don't mind
         </div> */}
-      </div>
+      {/* </div> */}
     </>
   );
 }

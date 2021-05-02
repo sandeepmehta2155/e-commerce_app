@@ -54,18 +54,6 @@ const itemsInCart = [
       "https://images-na.ssl-images-amazon.com/images/I/513nAJS9epL._SX326_BO1,204,203,200_.jpg"
   },
   {
-    id: 4,
-    name: "Taxmann's Stock Market....",
-    Originalprice: 725,
-    price: 604,
-    quantity: 0,
-    wishList: "no",
-    stockStatus: "InStock",
-    fastDelivery: "yes",
-    src:
-      "https://images-na.ssl-images-amazon.com/images/I/41jKUY3iEFL._SX379_BO1,204,203,200_.jpg"
-  },
-  {
     id: 5,
     name: "The Intelligent Investor",
     Originalprice: 799,

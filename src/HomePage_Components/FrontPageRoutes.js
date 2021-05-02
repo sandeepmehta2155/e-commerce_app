@@ -30,48 +30,48 @@ export function FrontPageRoutes() {
           </svg>
         </button>
       </Link>
-      <div
-        className="homeOptions"
+      <button
         onClick={() =>
           options === "optionSet"
             ? setOptions("optionSetNone")
             : setOptions("optionSet")
         }
-        style={{ color: "black" }}
       >
-        &#9776;
-      </div>
+        <div className="homeOptions" style={{ color: "black" }}>
+          &#9776;
+        </div>
+      </button>
 
       <ul className={options}>
         <NavLink to="/">
-          <li key={"home"} className="optionSet pills">
-            Home
-          </li>
+          <button className="optionSet pills">
+            <li key={"home"}>Home</li>
+          </button>
         </NavLink>
         <NavLink to="/profile">
-          <li key={"user"} className="optionSet pills">
-            User Profile
-          </li>
+          <button className="optionSet pills">
+            <li key={"user"}>User Profile</li>
+          </button>
         </NavLink>
         <NavLink to="/login">
-          <li key={"Login"} className="optionSet pills">
-            Login / Sign Up
-          </li>
+          <button className="optionSet pills">
+            <li key={"Login"}>Login / Sign Up</li>
+          </button>
         </NavLink>
         <NavLink to="/">
-          <li key={"Products"} className="optionSet pills">
-            Products
-          </li>
+          <button className="optionSet pills">
+            <li key={"Products"}>Products</li>
+          </button>
         </NavLink>
         <NavLink to="/cart">
-          <li key={"Cart"} className="optionSet pills">
-            Cart
-          </li>
+          <button className="optionSet pills">
+            <li key={"Cart"}>Cart</li>
+          </button>
         </NavLink>
         <NavLink to="/wishlist">
-          <li key={"WishList"} className="optionSet pills">
-            WishList
-          </li>
+          <button className="optionSet pills">
+            <li key={"WishList"}>WishList</li>
+          </button>
         </NavLink>
       </ul>
 

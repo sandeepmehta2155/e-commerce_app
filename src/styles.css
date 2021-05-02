@@ -407,7 +407,7 @@ h1 {
   border: black 2px solid;
   border-radius: 50%;
   font-size: 1.7rem;
-  z-index: 9999999;
+  z-index: 9999999999;
 }
 .optionSet {
   display: block;
@@ -430,8 +430,8 @@ h1 {
   list-style: none;
   text-decoration: none;
   position: relative;
-  height: 1rem;
-
+  height: 2rem;
+  border: none;
   margin: 4rem;
   opacity: 1;
 }
@@ -570,6 +570,7 @@ h1 {
   /* display: block; */
   float: right;
   position: relative;
+  right: 2rem;
   top: 1.5rem;
   width: 20px;
   height: 20px;
@@ -981,29 +982,27 @@ h1 {
 }
 .productCard {
   border: 1px lightgray solid;
+  padding: 0.5rem;
   width: 70%;
   text-align: center;
   margin: auto;
   margin-top: 4rem;
-  height: 33rem;
-  overflow: hidden;
-}
-.card-title {
-  margin: 0.8rem;
-}
-.cardProductDetails {
+  height: 30rem;
+  /* overflow: hidden; */
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   justify-content: space-between;
   flex-direction: column;
 }
-.cardProductDetails:hover {
-  position: relative;
-  text-shadow: 0 0 1px #ff0000;
-  bottom: 0.51rem;
-  left: 1rem;
+.cardImage {
+  width: 50%;
+  height: 100%;
 }
+.card-title {
+  margin: 0.8rem;
+}
+
 .cartAndWishlistButtons {
   align-self: flex-end;
   margin: auto;
@@ -1032,7 +1031,7 @@ h1 {
   border-radius: 50%;
   position: relative;
   top: 0rem;
-  left: 1.8rem;
+  left: 6.5rem;
 }
 .fBadge.Text {
   border: none;
@@ -1048,9 +1047,9 @@ h1 {
 
 /* CART PAGE */
 .cartCheckOut {
-  border: #333333 1px solid;
+  border: lightgray 1px solid;
   position: relative;
-  top: 10rem;
+  top: 12rem;
   right: 5rem;
   float: right;
   display: block;
@@ -1061,9 +1060,8 @@ h1 {
 }
 .cartDetails,
 .wishListPage {
-  border: #333333 1px solid;
   position: relative;
-  top: 12rem;
+  top: 10rem;
   left: 5rem;
   display: block;
   margin: auto;
@@ -1102,8 +1100,8 @@ h1 {
 }
 .wishList.bi-trash,
 .bi-wishList {
-  height: 5rem;
-  width: 5rem;
+  height: 1rem;
+  width: 1rem;
   padding: 0.5rem;
   background-color: coral;
   outline: none;
@@ -1119,8 +1117,8 @@ h1 {
   background-color: none;
   border: none;
   position: relative;
-  top: -9rem;
-  left: 20rem;
+  top: -12rem;
+  left: 25rem;
   padding: 0;
   margin: 2rem;
 }
@@ -1557,7 +1555,7 @@ h1 {
     /* padding: 1rem; */
     /* overflow: scroll; */
     min-height: 3rem;
-    width: 100%;
+    width: 102%;
     position: absolute;
     top: 9rem;
     z-index: 99999;
@@ -1639,6 +1637,7 @@ h1 {
     width: 90%;
     flex-direction: column;
     margin: 1rem;
+
     border: 1px solid gray;
   }
   .cardProductDetails:hover {
