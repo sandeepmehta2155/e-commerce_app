@@ -422,6 +422,7 @@ h1 {
   background-color: #333333;
   color: white;
   justify-items: center;
+  overflow: scroll;
 }
 .optionSetNone {
   display: none;
@@ -434,6 +435,7 @@ h1 {
   border: none;
   margin: 4rem;
   opacity: 1;
+  overflow: hidden;
 }
 .optionSet.pills:hover {
   background-color: #000;
@@ -1160,7 +1162,8 @@ h1 {
 /*LOGIN PAGE*/
 
 .modalForLogin,
-.modalForSubscription {
+.modalForSubscription,
+.feedbackPage {
   position: relative;
   top: 8rem;
   border: 1px solid gray;
@@ -1171,9 +1174,9 @@ h1 {
 }
 
 .modal1,
-.modalForSubscription input {
+.modalForSubscription {
   float: right;
-  margin-right: 20%;
+  margin-right: 30%;
 }
 .modal1,
 .modalForSubscription #check {
@@ -1182,11 +1185,51 @@ h1 {
   margin-left: 1rem;
 }
 .modal1,
-.modalForSubscription label {
+.modalForSubscription,
+.feedbackPage label {
   float: left;
   margin-left: 20%;
 }
 
+/*FEEDBACK PAGE*/
+.feedbackPage {
+  padding: 2rem;
+  height: 22rem;
+}
+.feedbackPage input {
+  float: right;
+  margin-right: 27%;
+  width: 30vh;
+  border: 1px solid #ccc;
+}
+.feedbackPage textarea {
+  width: 27vh;
+  border: 1px solid #ccc;
+}
+
+.feedbackInputMessage {
+  float: right;
+  margin-right: 27%;
+  height: 15vh;
+  width: 25vh;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+.btn.btn-primary.feedback-button {
+  position: relative;
+  top: 8rem;
+  left: 10rem;
+}
+.successFullFeedback,
+.failedFeedback {
+  position: relative;
+  top: 8rem;
+  left: 10rem;
+  color: green;
+}
+.failedFeedback {
+  color: red;
+}
 /*Footer*/
 .footer {
   display: flex;

@@ -21,6 +21,7 @@ export { WishList } from "./WishList-Page/wishlist";
 export { UserProfile } from "./UserProfile-Page/userprofile";
 export { FrontPageRoutes } from "./HomePage_Components/FrontPageRoutes";
 export { PrivateRoute } from "./UserProfile-Page/PrivateRoute";
+export { Feedback } from "./Feedback-page/feedback";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
