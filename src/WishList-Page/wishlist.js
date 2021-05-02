@@ -33,16 +33,7 @@ export const WishList = () => {
                       className="wishListbi-trashButton"
                       onClick={() => cartDispatch({ type: "increment", obj })}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        className="wishList bi-trash"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
-                      </svg>
+                      Add to cart
                     </button>
                   )}
                   {obj.quantity > 0 && (
@@ -52,36 +43,47 @@ export const WishList = () => {
                         cartDispatch({ type: "removeFromCart", obj })
                       }
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="wishList bi-trash"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
-                      </svg>
+                      Remove From Cart
                     </button>
                   )}
                   {obj.wishList === "yes" && (
                     <button
-                      className="wishListbi-wishListButton"
+                      className="wishListbi-wishListHeartButton"
                       onClick={() =>
                         cartDispatch({ type: "removeFromWishList", obj })
                       }
                     >
-                      <svg
-                        className="wishList bi-wishList"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 25 25"
-                        fill="currentColor"
-                      >
-                        <g>
-                          <path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"></path>
-                        </g>
-                      </svg>
+                      {obj.wishList === "yes" && (
+                        <span
+                          className="love active"
+                          onClick={() =>
+                            cartDispatch({ type: "removeFromWishList", obj })
+                          }
+                        >
+                          <span className="drop"></span>
+                          <span className="drop"></span>
+                          <span className="drop"></span>
+                          <span className="drop"></span>
+                          <span className="drop"></span>
+                          <span className="drop"></span>
+                          <span className="drop"></span>
+                          <span className="circleheart"></span>
+
+                          <svg
+                            className="heart"
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            x="0"
+                            y="0"
+                            width="510"
+                            height="510"
+                            viewBox="0 0 510 510"
+                            // xml:space="preserve"
+                          >
+                            <path d="M255 489.6l-35.7-35.7C86.7 336.6 0 257.6 0 160.7 0 81.6 61.2 20.4 140.3 20.4c43.4 0 86.7 20.4 114.8 53.6C283.1 40.8 326.4 20.4 369.8 20.4 448.8 20.4 510 81.6 510 160.7c0 96.9-86.7 176-219.3 293.3L255 489.6z" />
+                          </svg>
+                        </span>
+                      )}
                     </button>
                   )}
                 </div>
