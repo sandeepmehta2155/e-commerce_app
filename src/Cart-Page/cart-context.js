@@ -76,31 +76,88 @@ const itemsInCart = [
     fastDelivery: "yes",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/41l0cQEXrCL._SX346_BO1,204,203,200_.jpg"
+  },
+  {
+    id: 10,
+    name: "A Court of Thorns",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src: "https://m.media-amazon.com/images/I/51FaoP3MfML.jpg"
+  },
+  {
+    id: 11,
+    name: "A Separate Peace",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src: "https://m.media-amazon.com/images/I/51L1V9iIB7L.jpg"
+  },
+  {
+    id: 12,
+    name: "A Court of Thorns",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355896528l/13356675.jpg"
+  },
+  {
+    id: 13,
+    name: "A Wizard of Earthsea",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355896528l/13356675.jpg"
+  },
+  {
+    id: 14,
+    name: "A Wizard of Earthsea",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src: "https://m.media-amazon.com/images/I/510-sv2qzFL.jpg"
+  },
+  {
+    id: 15,
+    name: "A Wizard of Earthsea",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src:
+      "https://images-na.ssl-images-amazon.com/images/I/51B50rWGTkL._SX315_BO1,204,203,200_.jpg"
+  },
+  {
+    id: 16,
+    name: "A Wizard of Earthsea",
+    Originalprice: 369,
+    price: 499,
+    quantity: 0,
+    wishList: "no",
+    stockStatus: "InStock",
+    fastDelivery: "yes",
+    src:
+      "https://images-na.ssl-images-amazon.com/images/I/416QkO9SfFL._SX331_BO1,204,203,200_.jpg"
   }
-  // {
-  //   id: 7,
-  //   name: "japani polish",
-  //   price: 10000,
-  //   quantity: 0,
-  //   src:
-  //     "https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
-  // },
-  // {
-  //   id: 8,
-  //   name: "japani polish",
-  //   price: 10000,
-  //   quantity: 0,
-  //   src:
-  //     "https://images-na.ssl-images-amazon.com/images/I/51B50rWGTkL._SX315_BO1,204,203,200_.jpg"
-  // },
-  // {
-  //   id: 9,
-  //   name: "japani polish",
-  //   price: 10000,
-  //   quantity: 0,
-  //   src:
-  //     "https://images-na.ssl-images-amazon.com/images/I/416QkO9SfFL._SX331_BO1,204,203,200_.jpg"
-  // }
 ];
 function cartReducer(state, action) {
   switch (action.type) {
