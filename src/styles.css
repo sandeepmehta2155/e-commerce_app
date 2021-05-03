@@ -1181,8 +1181,8 @@ h1 {
 /*LOGIN PAGE*/
 
 .modalForLogin,
-.modalForSubscription,
-.feedbackPage {
+.feedbackPage,
+.signUpPage {
   position: relative;
   top: 8rem;
   border: 1px solid gray;
@@ -1193,21 +1193,29 @@ h1 {
 }
 
 .modal1,
-.modalForSubscription {
+.signUpPage input {
   float: right;
   margin-right: 30%;
 }
 .modal1,
-.modalForSubscription #check {
+.signUpPage #check {
   float: left;
   margin: 0.255rem;
   margin-left: 1rem;
 }
 .modal1,
-.modalForSubscription,
+.signUpPage label,
 .feedbackPage label {
   float: left;
   margin-left: 20%;
+}
+
+/*SIGNUP PAGE*/
+.signUpPage label {
+  margin-left: 10%;
+}
+.signUpPage input {
+  margin-right: 20%;
 }
 
 /*FEEDBACK PAGE*/

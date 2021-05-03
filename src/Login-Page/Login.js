@@ -26,7 +26,7 @@ export function Login() {
       : setUserLogin(false);
   }, [checkResponseFromDataBase]);
 
-  async function CheckAuth() {
+  async function setResponseFromDB() {
     await axios
       .post("https://e-commerce.sandeepmehta215.repl.co/userauth", {
         username: userName,
@@ -74,8 +74,7 @@ export function Login() {
         <button
           className="btn btn-primary"
           onClick={() => {
-            CheckAuth();
-            // SetStatus();
+            setResponseFromDB();
           }}
         >
           Login

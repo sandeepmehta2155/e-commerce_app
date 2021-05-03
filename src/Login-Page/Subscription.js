@@ -5,72 +5,54 @@ import { useAuth } from "./auth-context";
 
 export function Subscription() {
   const [firstNameAndLastName, setFirstNameAndLastName] = useState("");
-  const [passwordReInput, setpasswordReInput] = useState("");
+
   const [userName, setUserName] = useState("");
   const [passwordInput, setUserPassword] = useState("");
+  const [passwordReInput, setpasswordReInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
 
+  const [passwordCheck, setCheckPassword] = useState("none");
   const [emailExists, setEmailExists] = useState("none");
   const [userExists, setUserExists] = useState("none");
+  const [userAdded, setUserAdded] = useState("none");
 
   const [type, setType] = useState("password");
-  const [usersFromDataBase, setUsersFromDataBase] = useState("");
+  const [responseFromDataBase, setResponseFromDataBase] = useState("");
 
   const reg = /([0-9])/;
 
   useEffect(() => {
-    axios
-      .get("https://e-commerce.sandeepmehta215.repl.co/login")
-      .then((response) => setUsersFromDataBase(response.data.users));
-  }, []);
+    setUserExists("block");
+    responseFromDataBase === "user Exists for given username"
+      ? setUserExists("block")
+      : setUserExists("none");
 
-  function CheckAuth() {
-    if (usersFromDataBase)
-      usersFromDataBase.find(({ username, email }) => {
-        setUserExists("none");
-        setEmailExists("none");
-        switch (username) {
-          case userName:
-            setUserExists("block");
-            break;
-          default:
-            break;
-        }
-        switch (email) {
-          case emailInput:
-            setEmailExists("block");
-            break;
-          default:
-            break;
-        }
-      });
+    reg.test(passwordInput) &&
+    passwordInput === passwordReInput &&
+    responseFromDataBase === "user added in database"
+      ? setUserAdded("block")
+      : setUserAdded("none");
+
+    responseFromDataBase === "email Exists for given username"
+      ? setEmailExists("block")
+      : setEmailExists("none");
+  }, [responseFromDataBase]);
+
+  async function setResponseFromDB() {
+    await axios
+      .post("https://e-commerce.sandeepmehta215.repl.co/login", {
+        fullname: firstNameAndLastName,
+        username: userName,
+        email: emailInput,
+        password: passwordInput
+      })
+      .then((response) => setResponseFromDataBase(response.data.message));
   }
 
-  async function PostData() {
-    setTimeout(() => {
-      if (
-        firstNameAndLastName &&
-        emailExists === "none" &&
-        userExists === "none" &&
-        reg.test(passwordInput) &&
-        passwordInput === passwordReInput
-      )
-        console.log("Signup");
-      else console.log("Data not added");
-    }, 3000);
-  }
   return (
-    <div className="modalForSubscription">
+    <div className="signUpPage">
       <h2 style={{ color: "coral" }}>Subscribe</h2>
-      {/* {console.log("user exists in 52 : ", userExists)} */}
-      {/* {console.log(
-        "email : ",
-        emailExists,
-        " | user exists in 56 : ",
-        userExists,
-        "| type : ",
-        type
-      )} */}
+      {/* {console.log(responseFromDataBase)} */}
       <label>Enter your name : </label>
       <input
         type="text"
@@ -90,9 +72,7 @@ export function Subscription() {
       />
       <br />
 
-      <small style={{ color: "red", display: userExists }}>
-        {"                    "}User exists
-      </small>
+      <small style={{ color: "red", display: userExists }}>User exists</small>
 
       <br />
       <label>Enter your e-mail : </label>
@@ -158,12 +138,18 @@ export function Subscription() {
       <button
         className="btn btn-primary"
         onClick={() => {
-          PostData();
-          CheckAuth();
+          setResponseFromDB();
         }}
       >
         Sign Up
       </button>
+      {console.log(userAdded)}
+      <span style={{ color: "green", display: userAdded }}>
+        User Added in database
+        <span role="img" aria-labelledby="emoji">
+          ✅
+        </span>
+      </span>
     </div>
   );
 }
