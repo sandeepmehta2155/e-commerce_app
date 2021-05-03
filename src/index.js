@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import { CartProvider } from "./Cart-Page/cart-context";
+import { ProductProvider } from "./Products-Page/product-context";
 import { FilterProvider } from "./Products-Page/filter-context";
 import { ThemeProvider } from "./HomePage_Components/theme-context";
 import { AuthProvider } from "./Login-Page/auth-context";
@@ -30,9 +30,9 @@ ReactDOM.render(
       <AuthProvider>
         <ThemeProvider>
           <FilterProvider>
-            <CartProvider>
+            <ProductProvider>
               <App />
-            </CartProvider>
+            </ProductProvider>
           </FilterProvider>
         </ThemeProvider>
       </AuthProvider>

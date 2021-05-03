@@ -1,12 +1,12 @@
-import { useCart } from "../Cart-Page/cart-context";
+import { useProd } from "../Products-Page/product-context";
 
 export const WishList = () => {
-  const { itemsInCart, cartDispatch } = useCart();
+  const { itemsInProduct, productDispatch } = useProd();
   return (
     <>
       <ul className="wishListPage">
         <h2> Your Wishlist </h2>
-        {itemsInCart.map(
+        {itemsInProduct.map(
           (obj) =>
             obj.wishList === "yes" && (
               <li key={obj.id} className="wishListProduct">
@@ -31,7 +31,9 @@ export const WishList = () => {
                   {obj.quantity === 0 && (
                     <button
                       className="wishListbi-trashButton"
-                      onClick={() => cartDispatch({ type: "increment", obj })}
+                      onClick={() =>
+                        productDispatch({ type: "increment", obj })
+                      }
                     >
                       Add to cart
                     </button>
@@ -40,7 +42,7 @@ export const WishList = () => {
                     <button
                       className="wishListbi-trashButton"
                       onClick={() =>
-                        cartDispatch({ type: "removeFromCart", obj })
+                        productDispatch({ type: "removeFromCart", obj })
                       }
                     >
                       Remove From Cart
@@ -50,14 +52,14 @@ export const WishList = () => {
                     <button
                       className="wishListbi-wishListHeartButton"
                       onClick={() =>
-                        cartDispatch({ type: "removeFromWishList", obj })
+                        productDispatch({ type: "removeFromWishList", obj })
                       }
                     >
                       {obj.wishList === "yes" && (
                         <span
                           className="love active"
                           onClick={() =>
-                            cartDispatch({ type: "removeFromWishList", obj })
+                            productDispatch({ type: "removeFromWishList", obj })
                           }
                         >
                           <span className="drop"></span>

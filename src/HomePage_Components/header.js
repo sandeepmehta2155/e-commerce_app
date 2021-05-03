@@ -1,12 +1,12 @@
-import { useCart } from "../Cart-Page/cart-context";
+import { useProd } from "../Products-Page/product-context";
 
 export function Header() {
-  const { itemsInCart } = useCart();
+  const { itemsInProduct } = useProd();
 
   let cartTotalQuantity = 0;
   let wishListQuantity = 0;
 
-  itemsInCart.map((obj) => {
+  itemsInProduct.map((obj) => {
     cartTotalQuantity += obj.quantity;
     if (obj.wishList === "yes") wishListQuantity++;
   });

@@ -1,9 +1,10 @@
-import { useCart } from "../Cart-Page/cart-context";
+// import { useCart } from "../Cart-Page/cart-context";
 import * as useComponent from "../index";
 import { useFilter } from "./filter-context";
+import { useProd } from "./product-context";
 
 export const Products = () => {
-  const { itemsInCart, cartDispatch } = useCart();
+  const { itemsInProduct, productDispatch } = useProd();
   const { IncludeOutOfStock } = useFilter();
   const { fastDelvry } = useFilter();
   const { value } = useFilter();
@@ -24,7 +25,7 @@ export const Products = () => {
       </div>
       <h1 className="productsHead">Books in focus</h1>
       <ul className="productList">
-        {itemsInCart
+        {itemsInProduct
           .filter((obj) => {
             if (IncludeOutOfStock) return obj.stockStatus === "InStock";
             return obj;
@@ -51,7 +52,7 @@ export const Products = () => {
                       <span
                         className="love active"
                         onClick={() =>
-                          cartDispatch({ type: "removeFromWishList", obj })
+                          productDispatch({ type: "removeFromWishList", obj })
                         }
                       >
                         <span className="drop"></span>
@@ -82,7 +83,7 @@ export const Products = () => {
                       <span
                         className="love"
                         onClick={() =>
-                          cartDispatch({ type: "addToWishList", obj })
+                          productDispatch({ type: "addToWishList", obj })
                         }
                       >
                         <span className="drop"></span>

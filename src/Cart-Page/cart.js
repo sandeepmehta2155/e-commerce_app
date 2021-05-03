@@ -1,12 +1,12 @@
-import { useCart } from "./cart-context";
+import { useProd } from "../Products-Page/product-context";
 
 export const Cart = () => {
-  const { itemsInCart, cartDispatch } = useCart();
+  const { itemsInProduct, productDispatch } = useProd();
   let cartTotalQuantity = 0;
   let cartTotalPrice = 0;
-  itemsInCart.map((obj) => (cartTotalQuantity += obj.quantity));
+  itemsInProduct.map((obj) => (cartTotalQuantity += obj.quantity));
 
-  itemsInCart.map((obj) => (cartTotalPrice += obj.price * obj.quantity));
+  itemsInProduct.map((obj) => (cartTotalPrice += obj.price * obj.quantity));
 
   return (
     <>
@@ -19,7 +19,7 @@ export const Cart = () => {
       </div>
       <ul className="cartDetails">
         <h2> Shopping Cart </h2>
-        {itemsInCart.map(
+        {itemsInProduct.map(
           (obj) =>
             obj.quantity > 0 && (
               <li
@@ -46,13 +46,13 @@ export const Cart = () => {
 
                   <button
                     className="btn btn-primary"
-                    onClick={() => cartDispatch({ type: "increment", obj })}
+                    onClick={() => productDispatch({ type: "increment", obj })}
                   >
                     +
                   </button>
                   <button
                     className="btn btn-primary"
-                    onClick={() => cartDispatch({ type: "decrement", obj })}
+                    onClick={() => productDispatch({ type: "decrement", obj })}
                   >
                     -
                   </button>
@@ -60,7 +60,7 @@ export const Cart = () => {
                   <button
                     className="cartbi-trashButton"
                     onClick={() =>
-                      cartDispatch({ type: "removeFromCart", obj })
+                      productDispatch({ type: "removeFromCart", obj })
                     }
                   >
                     <svg
