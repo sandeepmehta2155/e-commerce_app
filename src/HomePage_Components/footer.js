@@ -30,8 +30,6 @@ export function Footer() {
   return (
     <>
       <footer>
-        <h1 className="nameFooter">Flanbieuto</h1>
-
         <div className="footer">
           <div className="About">
             <span className="aboutUs">

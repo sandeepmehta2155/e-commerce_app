@@ -11,15 +11,14 @@ export { Header } from "./HomePage_Components/header";
 export { Footer } from "./HomePage_Components/footer";
 export { FeaturedAuthors } from "./HomePage_Components/featured-authors";
 export { BookBatches } from "./HomePage_Components/book-batch";
-export { Navigation } from "./HomePage_Components/navigation";
 export { ChatBot } from "./HomePage_Components/chatBot";
 export { Login } from "./Login-Page/Login";
 export { Subscription } from "./Login-Page/Subscription";
 export { Products } from "./Products-Page/products";
+export { Home } from "./HomePage_Components/Home";
 export { Cart } from "./Cart-Page/cart";
 export { WishList } from "./WishList-Page/wishlist";
 export { UserProfile } from "./UserProfile-Page/userprofile";
-export { FrontPageRoutes } from "./HomePage_Components/FrontPageRoutes";
 export { PrivateRoute } from "./UserProfile-Page/PrivateRoute";
 export { Feedback } from "./Feedback-page/feedback";
 

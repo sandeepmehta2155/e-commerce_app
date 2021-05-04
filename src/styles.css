@@ -1,14 +1,14 @@
 @import "https://vinbolib.netlify.app/index.css";
-@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mallanna&display=swap");
 
 :root {
   --primary-color: purple;
-  --secondary-color: #ffb20a;
+  --secondary-color: #f8f8f8;
 }
 body {
   margin: auto;
   padding: 0;
+  font-family: "Mallanna";
   /* width: 100%; */
 }
 .bodyDark {
@@ -35,17 +35,31 @@ footer {
   position: relative;
   margin-top: 5rem;
   width: 100%;
+  color: black;
 }
 header {
   position: fixed;
   top: 0;
   z-index: 9999;
   margin: 0;
+  height: 5rem;
 }
 h1 {
   text-align: center;
 }
-
+.headerHomeComponent,
+.headerProductComponent {
+  display: inline;
+  position: fixed;
+  top: 1rem;
+  right: 20rem;
+  z-index: 9999;
+  color: black;
+  /* margin-right: 3rem; */
+}
+.headerProductComponent {
+  right: 14rem;
+}
 /*BOT CHAT*/
 
 .chat-bubble {
@@ -128,155 +142,6 @@ h1 {
   }
 }
 
-/* TOODLES OVER IMAGE*/
-
-.container {
-  position: absolute;
-  z-index: 999;
-  right: 35%;
-  top: 112%;
-  transform: translate(-50%, -50%);
-  display: flex;
-}
-
-.dash {
-  margin: 0 15px;
-  width: 40px;
-  height: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px 0 #fecdff;
-}
-
-.one {
-  margin-right: -18px;
-  transform-origin: center left;
-  animation: spin 3s linear infinite;
-  background: lightgoldenrodyellow;
-}
-
-.two {
-  transform-origin: center right;
-  animation: spin2 3s linear infinite;
-  animation-delay: 0.2s;
-  background: yellow;
-}
-
-.three {
-  transform-origin: center right;
-  animation: spin3 3s linear infinite;
-  animation-delay: 0.3s;
-  background: orange;
-}
-
-.four {
-  transform-origin: center right;
-  animation: spin4 3s linear infinite;
-  animation-delay: 0.4s;
-  background: orangered;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(360deg);
-  }
-  30% {
-    transform: rotate(370deg);
-  }
-  35% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: rotate(-180deg);
-  }
-  35% {
-    transform: rotate(-190deg);
-  }
-  40% {
-    transform: rotate(-180deg);
-  }
-  78% {
-    transform: rotate(-180deg);
-  }
-  95% {
-    transform: rotate(-360deg);
-  }
-  98% {
-    transform: rotate(-370deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes spin3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  27% {
-    transform: rotate(0deg);
-  }
-  40% {
-    transform: rotate(180deg);
-  }
-  45% {
-    transform: rotate(190deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  62% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
-  80% {
-    transform: rotate(370deg);
-  }
-  85% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin4 {
-  0% {
-    transform: rotate(0deg);
-  }
-  38% {
-    transform: rotate(0deg);
-  }
-  60% {
-    transform: rotate(-360deg);
-  }
-  65% {
-    transform: rotate(-370deg);
-  }
-  75% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
 /* CHAT BOT CHAT MENU*/
 .bi.bi-chat-dots,
 .chatBot,
@@ -327,56 +192,15 @@ h1 {
   position: fixed;
   left: 4.5rem;
   top: 1rem;
-  color: var(--primary-color);
-  font-family: "Sacramento", sans-serif;
+  color: #333333;
   font-size: 2rem;
 }
-.nameFooter {
-  text-align: center;
-}
 
-.symbol {
+.cartButton,
+.wishlistButton {
+  background-color: var(--secondary-color);
   border: none;
-  width: 5rem;
 }
-
-.searchBar {
-  height: 2.5rem;
-  width: 3rem;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  outline: none;
-  position: fixed;
-  left: 18.45rem;
-  top: 1.47rem;
-}
-
-.search {
-  position: fixed;
-  left: 21.5rem;
-  top: 1.4rem;
-  height: 2.5rem;
-  width: 100.4vh;
-  outline: none;
-}
-
-.bi.bi-search {
-  height: 1.3rem;
-  width: 1.3rem;
-  border: 1px solid black;
-  background-color: white;
-  padding: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  outline: none;
-  /* position: fixed;
-  left: 67.25rem;
-  top: 1.47rem; */
-  position: relative;
-  left: 134.5vh;
-  top: -0.3rem;
-}
-
 .bi.bi-cart3 {
   height: 3rem;
   width: 3rem;
@@ -393,83 +217,61 @@ h1 {
   right: 8.5rem;
   top: 1.8rem;
 }
-
-/* SIDE NAV FOR ROUTING ACROSS PAGES*/
-
-.homeOptions {
+.bi.bi-person-circle {
   position: fixed;
+  z-index: 9999;
+  height: 4rem;
+  width: 3.5rem;
+  right: -0.4rem;
   top: 1.5rem;
-  right: 1rem;
-  text-align: center;
-  width: 2.5rem;
+}
+/*HOME PAGE*/
+.featuredObjects,
+.bookBatches {
+  position: relative;
+  top: 9rem;
+}
+.bookBatches {
+  margin-bottom: 10rem;
+}
 
-  height: 2.5rem;
-  border: black 2px solid;
-  border-radius: 50%;
+.userProfileIcon {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
   font-size: 1.7rem;
   z-index: 9999999999;
 }
-.optionSet {
-  display: block;
-  opacity: 0.85;
-  position: fixed;
-  text-decoration: none;
-  height: 100%;
-  margin: 0;
-  top: 0rem;
-  right: 0rem;
-  z-index: 999999;
-  background-color: #333333;
-  color: white;
-  justify-items: center;
-  overflow: scroll;
-}
-.optionSetNone {
-  display: none;
-}
-.optionSet.pills {
-  list-style: none;
-  text-decoration: none;
-  position: relative;
-  height: 2rem;
+.userProfileIcon button {
+  background-color: var(--secondary-color);
   border: none;
-  margin: 4rem;
-  opacity: 1;
-  overflow: hidden;
-}
-.optionSet.pills:hover {
-  background-color: #000;
-  padding: 0.7rem;
-  border: 1px solid white;
 }
 
-.optionSet > a {
-  text-decoration: none;
-}
 .cartTotalQuantity,
 .wishListTotalQuantity {
   position: fixed;
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   text-align: center;
-  font-size: 0.7em;
-  color: white;
+  font-size: 0.7rem;
+  color: gray;
   z-index: 99999;
-  right: 6.3rem;
-  top: 1rem;
-  background-color: darkorange;
-  border: 2px solid white;
+  right: 6rem;
+  top: 0.75rem;
+  background-color: var(--secondary-color);
+  border: 2px solid black;
   border-radius: 50%;
 }
 .wishListTotalQuantity {
-  right: 11rem;
+  top: 0.85rem;
+  right: 11.2rem;
 }
 
 /* HOME page images */
 .Img {
   position: relative;
   display: block;
-  top: 7.1rem;
+  top: 4.5rem;
   width: 100%;
   height: 45rem;
   border: 3px solid black;
@@ -480,16 +282,8 @@ h1 {
   width: 99.5%;
   border: 3px solid var(--secondary-color);
 }
-.filters {
-  position: relative;
-  top: 10rem;
-}
 
 /* MAIN NAVIGATION BAR */
-.dropdownIcon,
-.dropdownIconResponsive {
-  display: none;
-}
 
 .navigation {
   padding-inline-start: 0;
@@ -504,44 +298,19 @@ h1 {
   top: 5rem;
   overflow: hidden;
 }
-.subNavIcon {
-  position: relative;
-  top: 0.2rem;
-  left: 0.5rem;
+.navigation a {
+  text-decoration: none;
 }
 
-.navigationPills,
-.navigationPillsResponsive {
+.navigationPills {
   background-color: #333333;
   color: white;
   font-size: 1rem;
   list-style: none;
+
   border: none;
   display: inline;
   padding: 1rem;
-}
-.navigationPills:hover,
-.subNavPills:hover {
-  background-color: black;
-  border: 1px solid white;
-  padding: 0.5rem;
-}
-
-.subNav {
-  background-color: #333333;
-  color: white;
-  margin: 0;
-  position: fixed;
-  top: 8.2rem;
-  z-index: 9999;
-  width: 100%;
-  opacity: 0.85;
-}
-.subNavPills {
-  list-style: none;
-  padding: 1rem;
-  width: 100%;
-  z-index: inherit;
 }
 
 /* DARK MODE SWICTHES */
@@ -572,17 +341,25 @@ h1 {
   /* display: block; */
   float: right;
   position: relative;
-  right: 2rem;
-  top: 1.5rem;
+  top: 12px;
+  right: 12px;
   width: 20px;
   height: 20px;
   /* margin: 50px auto; */
+  border-radius: 50%;
+  z-index: 999;
 }
 .heartButton {
   background-color: white;
+  width: 37px;
+  height: 35px;
+  z-index: 999;
+  border-radius: 50%;
   border: none;
   /* width: 5rem; */
   position: relative;
+  top: 0px;
+  right: 12px;
 }
 .heart {
   fill: #aabbc2;
@@ -967,84 +744,79 @@ h1 {
     height: 0px;
   }
 }
-.productList {
-  position: relative;
-  top: 8rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  margin-bottom: 15rem;
-}
-.list.list-group-item {
-  border: none;
-}
 .productsHead {
   position: relative;
-  top: 10rem;
+  top: 4rem;
 }
+
+.productList {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 4rem;
+}
+
 .productCard {
   border: 1px lightgray solid;
-  padding: 0.5rem;
-  width: 70%;
+  width: 15%;
   text-align: center;
   margin: auto;
-  margin-top: 4rem;
   height: 30rem;
+  margin: 3rem;
   /* overflow: hidden; */
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   justify-content: space-between;
   flex-direction: column;
+  border-radius: 0.5rem;
 }
 .cardImage {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  bottom: 1.2rem;
+  z-index: 1;
+  border-radius: 0.5rem;
+}
+.card-button {
+  display: block;
+  background-color: white;
+  border: none;
+  height: 10rem;
+  position: relative;
+  bottom: 5rem;
+  z-index: 0;
+  width: 100%;
+  font-size: 0rem;
+}
+.card-button:hover {
+  font-size: 1rem;
+  z-index: 99999;
+  height: 3rem;
+  margin: auto;
+  width: 90%;
+  position: relative;
+  bottom: 2.5rem;
+
+  border: #000 1px solid;
+}
+.card-title,
+.card-price {
+  margin: 0.8rem;
+  position: relative;
+  bottom: 10rem;
+  float: left;
 }
 .card-title {
-  margin: 0.8rem;
+  font-size: 1.3rem;
 }
-
-.cartAndWishlistButtons {
-  align-self: flex-end;
-  margin: auto;
-}
-
-.emptyHeart,
-.filledHeart {
-  height: 2rem;
-  width: 2rem;
-  fill: red;
+.card-price {
   position: relative;
-  top: 1.3rem;
-  left: 2rem;
-}
-
-.fBadge {
-  text-align: left;
-  font-size: 1rem;
-  color: coral;
-  background-color: #2874f0;
-  border: 2px solid coral;
-  padding: 0.5rem;
-  width: 1rem;
-  font-weight: bold;
-  height: 1rem;
-  border-radius: 50%;
-  position: relative;
-  top: 0rem;
-  left: 6.5rem;
-}
-.fBadge.Text {
-  border: none;
-  color: white;
-  background-color: coral;
-  font-size: 0.7rem;
-  padding: 0.2rem;
-  position: relative;
-  top: -1.7rem;
-  left: -1.3rem;
-  border-radius: 0.9rem;
+  bottom: 11rem;
 }
 
 /* CART PAGE */
@@ -1059,6 +831,20 @@ h1 {
   margin-bottom: 5rem;
   padding: 1rem;
   width: 20%;
+}
+.incButton,
+.decButton {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(#fff, #f9f9f9);
+  display: inline-block;
+  border: 1px solid #c2c2c2;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+  padding-top: 1px;
+  line-height: 1;
+  margin-right: 2rem;
 }
 .cartDetails,
 .wishListPage {
@@ -1101,7 +887,6 @@ h1 {
   margin-left: 1.5rem;
 }
 
-.wishListbi-trashButton,
 .wishListbi-wishListButton {
   padding: 0.5rem;
   width: 10rem;
@@ -1122,8 +907,8 @@ h1 {
   color: white;
   border-radius: 0.4rem;
   position: relative;
-  top: -10rem;
-  left: 28rem;
+  top: -8rem;
+  left: 38rem;
   z-index: 1;
 }
 /*WISHLIST PAGE*/
@@ -1136,22 +921,44 @@ h1 {
 .wishListProductDetails {
   width: 70rem;
 }
+.wishlistProduct-title {
+  font-size: 1.5rem;
+}
 .bi.bi-wishList {
   /* position: relative; */
   left: 27rem;
 }
-.cartbi-trashButton,
-.wishList.bi-trash {
-  background-color: coral;
-  outline: none;
-  border: coral;
-
-  border-radius: 0.4rem;
+.wishListbi-trashButton,
+.cartbi-trashButton {
+  font-size: 1rem;
+  z-index: 0;
+  height: 2.5rem;
+  margin: auto;
+  width: 30%;
   position: relative;
-  top: -5.5rem;
-  left: 20rem;
-  z-index: 1;
+  color: black;
+  background-color: white;
+  border: #000 1px solid;
 }
+.cartbi-trashButton {
+  position: relative;
+  left: 17rem;
+  bottom: 11rem;
+  width: 40%;
+}
+.LoginButton,
+.LogOutButton,
+.SignupButton {
+  font-size: 1rem;
+  z-index: 0;
+  height: 2rem;
+  margin: 1rem;
+  position: relative;
+  color: black;
+  background-color: white;
+  border: #000 1px solid;
+}
+
 .wishList.bi-trash {
   position: relative;
   top: 0rem;
@@ -1480,9 +1287,7 @@ h1 {
     font-size: 1.6rem;
     top: 1.4rem;
   }
-  .symbol {
-    width: 4rem;
-  }
+
   .container {
     display: none;
   }
@@ -1542,8 +1347,8 @@ h1 {
   }
   /* SIDE NAV FOR ROUTING */
 
-  .homeOptions {
-    position: fixed;
+  .userProfileIcon {
+    position: relative;
     width: 2rem;
     height: 2rem;
     right: 1.6rem;
@@ -1731,14 +1536,6 @@ h1 {
     bottom: 0rem;
     left: 0rem;
   }
-  .fBadge {
-    text-align: left;
-  }
-  .fBadge.Text {
-    position: relative;
-    top: -1.7rem;
-    left: -0.6rem;
-  }
 
   /* BOOK BATCHES*/
   .bookBatches,
@@ -1783,8 +1580,7 @@ h1 {
     border: none;
     width: 95%;
   }
-  .cartProduct,
-  .wishListProduct {
+  .cartProduct {
     display: flex;
     flex-direction: column;
     margin: 1rem;

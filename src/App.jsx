@@ -12,12 +12,11 @@ export default function App() {
     <>
       <div className={mode}>
         <useComponent.Header />
-        <useComponent.Navigation />
         <useComponent.ChatBot />
-        <useComponent.FrontPageRoutes />
 
         <Routes>
-          <Route path="/" element={<useComponent.Products />} />
+          <Route path="/" element={<useComponent.Home />} />
+          <Route path="/products" element={<useComponent.Products />} />
           <Route path="/cart" element={<useComponent.Cart />} />
           <Route path="/wishlist" element={<useComponent.WishList />} />
           <Route path="/login" element={<useComponent.Login />} />
