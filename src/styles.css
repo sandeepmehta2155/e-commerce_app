@@ -906,9 +906,7 @@ h1 {
   border: coral;
   color: white;
   border-radius: 0.4rem;
-  position: relative;
-  top: -8rem;
-  left: 38rem;
+  float: right;
   z-index: 1;
 }
 /*WISHLIST PAGE*/
