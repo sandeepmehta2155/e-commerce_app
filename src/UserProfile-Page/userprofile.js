@@ -1,3 +1,3 @@
 export function UserProfile() {
-  return <h1> This is UserProfile </h1>;
+  return <h1> Page is under development </h1>;
 }
