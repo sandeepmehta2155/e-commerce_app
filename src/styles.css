@@ -928,6 +928,32 @@ h1 {
   /* position: relative; */
   left: 27rem;
 }
+.cartEmptyCard {
+  border: 1px solid lightgray;
+  margin: auto;
+  text-align: center;
+  padding: 3rem;
+}
+.cartEmptyCard span {
+  color: gray;
+}
+.bi.bi-handbag,
+.bi-wind,
+.bi-basket {
+  fill: pink;
+  width: 10rem;
+  height: 10rem;
+}
+.bi.bi-wind {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  bottom: 3rem;
+  right: 2rem;
+}
+.bi.bi-basket {
+  fill: lightgray;
+}
 .wishListbi-trashButton,
 .cartbi-trashButton {
   font-size: 1rem;
@@ -948,7 +974,8 @@ h1 {
 }
 .LoginButton,
 .LogOutButton,
-.SignupButton {
+.SignupButton,
+.AddItemsFromWishlist {
   font-size: 1rem;
   z-index: 0;
   height: 2rem;

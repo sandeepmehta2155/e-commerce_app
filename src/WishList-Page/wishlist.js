@@ -1,11 +1,47 @@
 import { useProd } from "../Products-Page/product-context";
+import { Link } from "react-router-dom";
 
 export const WishList = () => {
   const { itemsInProduct, productDispatch } = useProd();
+  let wishListQuantity = 0;
+
+  itemsInProduct.map((obj) => {
+    if (obj.wishList === "yes") wishListQuantity++;
+  });
   return (
     <>
       <ul className="wishListPage">
         <h2> Your Wishlist </h2>
+        {wishListQuantity === 0 && (
+          <div className="cartEmptyCard">
+            <h3> Please Login to view WishList</h3>
+            <span> Login to see your WishList</span>
+            <br />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-wind"
+              viewBox="0 0 16 16"
+            >
+              <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="bi bi-handbag"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z" />
+            </svg>
+            <br />
+            <br />
+            <Link to="/login">
+              <button className="LoginButton">Login</button>
+            </Link>
+          </div>
+        )}
         {itemsInProduct.map(
           (obj) =>
             obj.wishList === "yes" && (
