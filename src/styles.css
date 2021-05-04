@@ -761,7 +761,7 @@ h1 {
 
 .productCard {
   border: 1px lightgray solid;
-  width: 15%;
+  width: 16.3%;
   text-align: center;
   margin: auto;
   height: 30rem;
@@ -965,9 +965,9 @@ h1 {
   border: #000 1px solid;
 }
 .cartbi-trashButton {
+  float: right;
   position: relative;
-  left: 17rem;
-  bottom: 11rem;
+  bottom: 10rem;
   width: 40%;
 }
 .LoginButton,
