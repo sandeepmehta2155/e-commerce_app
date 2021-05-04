@@ -39,7 +39,7 @@ export function Login() {
 
   return (
     <div className="modalForLogin">
-      <h2 style={{ color: "coral" }}>Login</h2>
+      <h2>Login</h2>
       {console.log(checkResponseFromDataBase, userExists)}
       <label>Enter your user-name : </label>
       <input
@@ -72,7 +72,7 @@ export function Login() {
 
       {!isUserLoggedIn && (
         <button
-          className="btn btn-primary"
+          className="LoginButton"
           onClick={() => {
             setResponseFromDB();
           }}
@@ -81,13 +81,13 @@ export function Login() {
         </button>
       )}
       {isUserLoggedIn && (
-        <button className="btn btn-primary" onClick={() => LogOut()}>
+        <button className="LogOutButton" onClick={() => LogOut()}>
           LogOut
         </button>
       )}
 
       <Link to="/subscription">
-        <button className="btn btn-primary">Sign Up</button>
+        <button className="SignupButton">Sign Up</button>
       </Link>
       <br />
       {isUserLoggedIn && (

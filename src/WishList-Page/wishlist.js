@@ -17,17 +17,35 @@ export const WishList = () => {
                   className="cartImg"
                 />
                 <div className="wishListProductDetails">
-                  <div className="card-title">{obj.name}</div>
+                  <div className="wishlistProduct-title">{obj.name}</div>
                   <br />
                   <div>
                     Rs {obj.price}
                     <span style={{ margin: ".5rem" }}>
                       <s>Rs {obj.Originalprice}</s>
                     </span>
+                    |
+                    <span>
+                      1 offer available{"   "}
+                      <svg
+                        width="14"
+                        height="14"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="_3GN0Y0"
+                      >
+                        <g fill="none">
+                          <path d="M-1-1h16v16H-1"></path>
+                          <path
+                            d="M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm.7 10.5H6.3V6.3h1.4v4.2zm0-5.6H6.3V3.5h1.4v1.4z"
+                            fill="#388e3c"
+                            class=""
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
                   </div>
                   <br />
-                  <br />
-                  <div>Cart quantity : {obj.quantity} </div>
+
                   {obj.quantity === 0 && (
                     <button
                       className="wishListbi-trashButton"
@@ -36,6 +54,9 @@ export const WishList = () => {
                       }
                     >
                       Add to cart
+                      <span role="img" aria-labelledby="cart">
+                        🛒
+                      </span>
                     </button>
                   )}
                   {obj.quantity > 0 && (

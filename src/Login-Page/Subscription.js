@@ -51,8 +51,7 @@ export function Subscription() {
 
   return (
     <div className="signUpPage">
-      <h2 style={{ color: "coral" }}>Subscribe</h2>
-      {/* {console.log(responseFromDataBase)} */}
+      <h2>Subscribe</h2>
       <label>Enter your name : </label>
       <input
         type="text"
@@ -133,10 +132,10 @@ export function Subscription() {
       )}
       <br />
       <Link to="/login">
-        <button className="btn btn-primary">Back to Login</button>
+        <button className="LoginButton">Back to Login</button>
       </Link>
       <button
-        className="btn btn-primary"
+        className="SignupButton"
         onClick={() => {
           setResponseFromDB();
         }}
