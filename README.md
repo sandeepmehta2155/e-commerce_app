@@ -2,4 +2,4 @@
 
 Created with CodeSandbox
 
-Build using React Hooks, React Router, NodeJS and MongoDB/Mongoose
+Builded using React Hooks, React Router, NodeJS and MongoDB/Mongoose
