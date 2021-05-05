@@ -285,42 +285,6 @@ const itemsInProduct = [
     fastDelivery: "yes",
     src: "https://m.media-amazon.com/images/I/5196gJhgX-L.jpg",
     category: "history"
-  },
-  {
-    id: 17,
-    name: "You",
-    Originalprice: 369,
-    price: 499,
-    quantity: 0,
-    wishList: "no",
-    stockStatus: "InStock",
-    fastDelivery: "yes",
-    src: "https://m.media-amazon.com/images/I/5196gJhgX-L.jpg",
-    category: "history"
-  },
-  {
-    id: 17,
-    name: "You",
-    Originalprice: 369,
-    price: 499,
-    quantity: 0,
-    wishList: "no",
-    stockStatus: "InStock",
-    fastDelivery: "yes",
-    src: "https://m.media-amazon.com/images/I/5196gJhgX-L.jpg",
-    category: "history"
-  },
-  {
-    id: 17,
-    name: "You",
-    Originalprice: 369,
-    price: 499,
-    quantity: 0,
-    wishList: "no",
-    stockStatus: "InStock",
-    fastDelivery: "yes",
-    src: "https://m.media-amazon.com/images/I/5196gJhgX-L.jpg",
-    category: "history"
   }
 ];
 function productReducer(state, action) {

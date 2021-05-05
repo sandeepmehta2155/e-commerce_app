@@ -6,7 +6,7 @@ export function FilterProvider({ children }) {
   const [IncludeOutOfStock, setIncludeOutOfStock] = useState(true);
   const [fastDelvry, setFastDelivery] = useState(false);
   const [value, setValue] = useState(1);
-  const [sorting, setSorting] = useState();
+  const [sorting, setSorting] = useState("");
 
   return (
     <FilterContext.Provider

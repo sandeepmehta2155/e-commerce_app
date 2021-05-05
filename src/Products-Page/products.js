@@ -1,16 +1,45 @@
 import { useFilter } from "./filter-context";
 import { useProd } from "./product-context";
+import Select from "react-select";
 
 export const Products = () => {
   const { itemsInProduct, productDispatch } = useProd();
   const { IncludeOutOfStock } = useFilter();
   const { fastDelvry } = useFilter();
   const { value } = useFilter();
-  const { sorting } = useFilter();
+  const { sorting, setSorting } = useFilter();
+
+  const options = [
+    { value: "HighToLow", label: "Price : High to Low" },
+    { value: "LowToHigh", label: "Price : Low to High" }
+  ];
 
   return (
     <>
       <h1 className="productsHead">Books in focus</h1>
+      <br />
+
+      {/* <input type="search" name="sort" placeholder="🔍   Search" /> */}
+      <span className="containerForSelectComponent">
+        <label for="sortingSelectBoxs">Sort by : </label>
+        <Select
+          name="sortingSelectBox"
+          id="sortingSelectBox"
+          options={options}
+          onChange={(e) => {
+            switch (e.value) {
+              case "LowToHigh":
+                setSorting("lowToHigh");
+                break;
+              case "HighToLow":
+                setSorting("highToLow");
+                break;
+              default:
+                setSorting("");
+            }
+          }}
+        />
+      </span>
       <ul className="productList">
         {itemsInProduct
           .filter((obj) => {
@@ -23,7 +52,7 @@ export const Products = () => {
           })
           .filter((obj) => obj.price > value)
           .sort((a, b) =>
-            sorting === "highToLow" ? a.price - b.price : b.price - a.price
+            sorting === "lowToHigh" ? a.price - b.price : b.price - a.price
           )
           .map((obj) => {
             return (
