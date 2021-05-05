@@ -334,6 +334,7 @@ h1 {
   border-radius: 2.4rem;
   outline: none;
 }
+
 /*SORTING AND FILTER COMPONENTS*/
 .containerForSelectComponent {
   color: gray;
@@ -805,20 +806,30 @@ h1 {
   z-index: 1;
   border-radius: 0.5rem;
 }
+.card-title {
+  position: relative;
+  bottom: 38rem;
+}
+.card-price {
+  position: relative;
+  bottom: 38rem;
+}
 .card-button {
   display: block;
-  background-color: white;
+
+  background-color: transparent;
   border: none;
-  height: 10rem;
+  height: 40rem;
   position: relative;
-  bottom: 5rem;
-  z-index: 0;
+  bottom: 25rem;
+  z-index: 1;
   width: 100%;
   font-size: 0rem;
 }
 .card-button:hover {
+  background-color: white;
   font-size: 1rem;
-  z-index: 99999;
+  z-index: 9;
   height: 3rem;
   margin: auto;
   width: 90%;
@@ -826,20 +837,6 @@ h1 {
   bottom: 2.5rem;
   box-shadow: 0 3px 16px 0 rgb(0 0 0 / 11%);
   border: #000 1px solid;
-}
-.card-title,
-.card-price {
-  margin: 0.8rem;
-  position: relative;
-  bottom: 10rem;
-  float: left;
-}
-.card-title {
-  font-size: 1.3rem;
-}
-.card-price {
-  position: relative;
-  bottom: 11rem;
 }
 
 /* CART PAGE */
@@ -1216,28 +1213,14 @@ h1 {
   .container {
     display: none;
   }
-  .searchBar {
-    position: fixed;
-    left: 15rem;
-    top: 1.4rem;
-  }
-  .search {
-    position: fixed;
-    left: 18rem;
-    top: 1.4rem;
-    width: 30%;
-  }
-  .navigation {
-    top: 5rem;
-  }
-  .bi.bi-search {
-    position: relative;
-    left: 49%;
-    top: -0.3rem;
-  }
+
   .productList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .productCard {
+    border: 1px lightgray solid;
+    width: 21%;
   }
   .bookBatches {
     display: grid;

@@ -135,9 +135,9 @@ export const Products = () => {
                         productDispatch({ type: "increment", obj })
                       }
                     >
-                      {" "}
                       Add to Cart{" "}
                       <span role="img" aria-labelledby="cart">
+                        {" "}
                         🛒
                       </span>
                     </button>
