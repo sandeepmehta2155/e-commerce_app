@@ -11,7 +11,6 @@ export { Header } from "./HomePage_Components/header";
 export { Footer } from "./HomePage_Components/footer";
 export { FeaturedAuthors } from "./HomePage_Components/featured-authors";
 export { BookBatches } from "./HomePage_Components/book-batch";
-export { ChatBot } from "./HomePage_Components/chatBot";
 export { Login } from "./Login-Page/Login";
 export { Subscription } from "./Login-Page/Subscription";
 export { Products } from "./Products-Page/products";
@@ -21,6 +20,7 @@ export { WishList } from "./WishList-Page/wishlist";
 export { UserProfile } from "./UserProfile-Page/userprofile";
 export { PrivateRoute } from "./UserProfile-Page/PrivateRoute";
 export { Feedback } from "./Feedback-page/feedback";
+export { RouteComponents } from "./Router-Components/Route-Components";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
