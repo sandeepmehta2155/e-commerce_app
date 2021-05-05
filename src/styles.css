@@ -907,26 +907,15 @@ h1 {
   margin-left: 1.5rem;
 }
 
-.wishListbi-wishListButton {
-  padding: 0.5rem;
-  width: 10rem;
-  background-color: coral;
-  outline: none;
-  border: coral;
-  color: white;
-  border-radius: 0.4rem;
-  position: relative;
-  top: -9rem;
-  left: 25rem;
-  z-index: 1;
-}
 .wishListbi-wishListHeartButton {
   background-color: white;
   outline: none;
-  border: coral;
+  border: gray;
   color: white;
   border-radius: 0.4rem;
   float: right;
+  position: relative;
+  bottom: 8rem;
   z-index: 1;
 }
 /*WISHLIST PAGE*/
@@ -979,7 +968,7 @@ h1 {
   height: 2.5rem;
   margin: auto;
   width: 30%;
-  position: relative;
+  /* position: relative; */
   color: black;
   background-color: white;
   border: #000 1px solid;
@@ -1213,7 +1202,7 @@ h1 {
   .container {
     display: none;
   }
-
+  /* PRODUCT PAGE */
   .productList {
     display: flex;
     flex-wrap: wrap;
@@ -1222,10 +1211,18 @@ h1 {
     border: 1px lightgray solid;
     width: 21%;
   }
+  /* CART PAGE*/
+  .cartbi-trashButton {
+    font-size: 0.8rem;
+  }
+
+  /*BOOK BATCHES*/
+
   .bookBatches {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
+    margin-bottom: 12rem;
   }
   .bookBatchPills {
     width: 80%;
@@ -1299,14 +1296,6 @@ h1 {
     position: relative;
     top: 0rem;
     left: 0rem;
-  }
-  .wishListbi-trashButton,
-  .wishListbi-wishListButton {
-    position: relative;
-    top: -7rem;
-    left: 8rem;
-    padding: 0;
-    margin: 2rem;
   }
   .bi.bi-wishList {
     left: 22rem;
