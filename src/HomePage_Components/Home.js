@@ -5,7 +5,7 @@ export function Home() {
       <img
         src="https://static.onecms.io/wp-content/uploads/sites/34/2019/12/bookshelf-organization-dark-room-full-rick-lozier-1219.jpg"
         alt="loading..."
-        className="Img"
+        className="ImgHomePage"
       />
 
       <useComponent.FeaturedAuthors />

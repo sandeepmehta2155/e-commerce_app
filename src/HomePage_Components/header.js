@@ -56,11 +56,11 @@ export function Header() {
 
           <Link to="/login">
             <div className="userProfileIcon" style={{ color: "black" }}>
-              <button>
+              <button className="bi bi-person-circleButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  class="bi bi-person-circle"
+                  className="bi bi-person-circle"
                   viewBox="0 1 23 23"
                 >
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />

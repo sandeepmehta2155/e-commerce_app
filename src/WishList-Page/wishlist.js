@@ -60,7 +60,7 @@ export const WishList = () => {
                     <span style={{ margin: ".5rem" }}>
                       <s>Rs {obj.Originalprice}</s>
                     </span>
-                    |
+                    |{" "}
                     <span>
                       1 offer available{"   "}
                       <svg

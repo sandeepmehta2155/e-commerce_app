@@ -187,8 +187,7 @@ h1 {
   width: 25rem;
 }
 
-.name,
-.nameFooter {
+.name {
   position: fixed;
   left: 4.5rem;
   top: 1rem;
@@ -225,6 +224,10 @@ h1 {
   right: -0.4rem;
   top: 1.5rem;
 }
+.bi.bi-person-circleButton {
+  background-color: transparent;
+  border: transparent;
+}
 /*HOME PAGE*/
 .featuredObjects,
 .bookBatches {
@@ -233,18 +236,6 @@ h1 {
 }
 .bookBatches {
   margin-bottom: 10rem;
-}
-
-.userProfileIcon {
-  position: fixed;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.7rem;
-  z-index: 9999999999;
-}
-.userProfileIcon button {
-  background-color: var(--secondary-color);
-  border: none;
 }
 
 .cartTotalQuantity,
@@ -268,7 +259,7 @@ h1 {
 }
 
 /* HOME page images */
-.Img {
+.ImgHomePage {
   position: relative;
   display: block;
   top: 4.5rem;
@@ -285,13 +276,12 @@ h1 {
 
 /* MAIN NAVIGATION BAR */
 
-.navigation {
+/* .navigation {
   padding-inline-start: 0;
   display: block;
   background-color: #333333;
   color: white;
   margin: 0;
-  /* padding: 1rem; */
   width: 100%;
   position: fixed;
   z-index: 9999;
@@ -311,7 +301,7 @@ h1 {
   border: none;
   display: inline;
   padding: 1rem;
-}
+} */
 
 /* DARK MODE SWICTHES */
 
@@ -879,6 +869,7 @@ h1 {
 }
 .cartDetails {
   margin: 0;
+  width: 100%;
   position: relative;
   display: block;
   margin-bottom: 20rem;
@@ -887,7 +878,6 @@ h1 {
 .wishListProduct {
   border: 1px solid lightgray;
   padding: 2rem;
-
   display: flex;
 }
 .cartImg {
@@ -902,9 +892,6 @@ h1 {
   width: 30rem;
   height: 11rem;
   margin-left: 3rem;
-}
-.btn.btn-primary {
-  margin-left: 1.5rem;
 }
 
 .wishListbi-wishListHeartButton {
@@ -1305,7 +1292,7 @@ h1 {
 
 @media (max-width: 670px) {
   header {
-    position: relative;
+    position: fixed;
     height: 8rem;
     padding-inline-start: 0px;
   }
@@ -1316,14 +1303,25 @@ h1 {
     padding-inline-start: 0px;
   }
   .name {
-    position: absolute;
-    font-size: 1.6rem;
-    top: 1.4rem;
+    font-size: 1.4rem;
+    left: 1rem;
   }
-
+  .headerHomeComponent,
+  .headerProductComponent {
+    position: fixed;
+    top: 4rem;
+    right: 15vh;
+    font-size: 1rem;
+    /* margin-right: 3rem; */
+  }
+  .headerProductComponent {
+    right: 5vh;
+  }
   .container {
     display: none;
   }
+
+  /*BOTCHAT*/
 
   .chat-bubble {
     position: fixed;
@@ -1335,59 +1333,51 @@ h1 {
     background-color: lightgray;
     border-radius: 50%;
   }
-  .searchBar {
-    position: absolute;
-    left: 2rem;
-    top: 5rem;
-  }
 
-  .search {
-    position: absolute;
-    left: 5rem;
-    top: 5rem;
-    width: 150px;
-  }
-
-  .bi.bi-search {
-    position: absolute;
-    left: 230px;
-    top: 5rem;
+  .cartTotalQuantity,
+  .wishListTotalQuantity {
+    width: 0.9rem;
+    height: 0.9rem;
+    font-size: 0.5rem;
+    color: gray;
+    z-index: 99999;
   }
 
   .bi.bi-cart3 {
-    position: absolute;
+    position: fixed;
     height: 2rem;
     width: 2rem;
-    right: 3.8rem;
+    right: 12vh;
     top: 1.5rem;
   }
   .cartTotalQuantity {
-    position: absolute;
-    right: 5rem;
+    position: fixed;
+    right: 13.5vh;
     top: 0.87rem;
+    background-color: white;
   }
   .wishListTotalQuantity {
-    position: absolute;
-    right: 7.7rem;
+    position: fixed;
+    right: 19.9vh;
+    background-color: white;
     top: 1rem;
   }
   .wishList {
-    position: absolute;
+    position: fixed;
     height: 2.5rem;
     width: 2.5rem;
-    right: 5.6rem;
-    top: 1.9rem;
+    right: 16vh;
+    top: 1.8rem;
   }
-  /* SIDE NAV FOR ROUTING */
+  .bi.bi-person-circle {
+    position: fixed;
+    z-index: 9999;
+    height: 3.2rem;
+    width: 3rem;
+    right: 2vh;
+    top: 1.5rem;
+  }
 
-  .userProfileIcon {
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    right: 1.6rem;
-    align-content: center;
-    font-size: 1.4rem;
-  }
   /*Chat box*/
 
   .bi.bi-chat-dots,
@@ -1438,91 +1428,17 @@ h1 {
   }
 
   /* HOME page images */
-  .Img {
+  .ImgHomePage {
+    position: relative;
+    top: 9rem;
     width: 100%;
     height: 20rem;
-    top: 1.7rem;
   }
 
   .filters {
     top: 12.5rem;
   }
 
-  /* NAVIGATION BAR */
-  .dropdownIcon {
-    display: list-item;
-    list-style: none;
-    position: absolute;
-    color: white;
-    background-color: #333333;
-    top: 0.8rem;
-    left: 1.5rem;
-    z-index: 9990099999;
-  }
-  .dropdownIconResponsive {
-    display: list-item;
-    list-style: none;
-    position: absolute;
-    background-color: #333333;
-    color: white;
-    top: 0.8rem;
-    left: 1.5rem;
-    z-index: 9990099999;
-  }
-
-  .navigation {
-    padding-inline-start: 0;
-    display: block;
-    background-color: #333333;
-    color: white;
-    margin: 0;
-    /* padding: 1rem; */
-    /* overflow: scroll; */
-    min-height: 3rem;
-    width: 102%;
-    position: absolute;
-    top: 9rem;
-    z-index: 99999;
-  }
-
-  .navigationPills {
-    display: block;
-    list-style: none;
-    padding: 1rem;
-    position: relative;
-    top: 2.5rem;
-    left: 1rem;
-    /* height: 1rem; */
-    /* overflow: scroll; */
-    left: 0rem;
-    width: 50%;
-    z-index: 99999;
-    text-align: left;
-  }
-  .navigationPillsResponsive {
-    display: none;
-  }
-  .navigationPills:hover {
-    background-color: none;
-    border: none;
-    padding: none;
-  }
-  .subNav {
-    background-color: lightgray;
-    color: black;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 99999;
-    top: 9rem;
-    float: right;
-    right: 0rem;
-    width: 50%;
-  }
-
-  .subNavIcon {
-    display: none;
-  }
   /* DARK MODE SWICTHES */
 
   .outerSwitch {
@@ -1536,36 +1452,55 @@ h1 {
     color: grey;
     outline: none;
   }
-
+  /* SORTING AND FILTER */
+  .containerForSelectComponent {
+    display: none;
+  }
   /* PRODUCTS LISTING AT HOME */
+  .productsHead {
+    position: relative;
+    top: 8rem;
+  }
   .productList {
-    display: grid;
-    grid-template-columns: 1fr;
     width: 100%;
     margin: 0;
     padding-inline-start: 0;
     align-content: center;
     justify-items: center;
     margin-bottom: 10rem;
+    margin-top: 2rem;
   }
-  .productsHead {
-    position: relative;
-    top: 5rem;
-  }
-  .f-assured {
-    border: none;
-    width: 3rem;
-  }
+
   .productCard {
     display: flex;
-    width: 90%;
+    width: 85%;
     flex-direction: column;
-    margin: 1rem;
+    margin: auto;
+    margin-bottom: 2rem;
 
     border: 1px solid gray;
   }
   .productCard:hover {
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 11%);
+  }
+  .card-button {
+    background-color: white;
+    border: 1px solid gray;
+    height: 2rem;
+    position: relative;
+    bottom: 0rem;
+    z-index: 1;
+    width: 80%;
+    margin: auto;
+    font-size: 1rem;
+  }
+  .card-button:hover {
+    display: none;
+  }
+  .card-title,
+  .card-price {
+    position: relative;
+    bottom: 0rem;
   }
 
   /* BOOK BATCHES*/
@@ -1585,53 +1520,54 @@ h1 {
 
   .cartCheckOut {
     position: relative;
-    top: 5rem;
-    right: 0rem;
-    float: none;
+    top: 12rem;
+    right: 1rem;
     display: block;
     margin: auto;
     margin-bottom: 7rem;
     padding: 1rem;
     width: 80%;
   }
+
   .cartDetails,
   .wishListPage {
-    position: relative;
     left: 0;
-    margin: auto;
-    margin-bottom: 15rem;
     text-align: center;
-    /* padding: 1rem; */
-    width: 80%;
+    width: 100%;
   }
+
   .cartDetails {
     position: relative;
-    top: 0rem;
-    margin-bottom: 2rem;
+    top: 10rem;
+    margin-bottom: 10rem;
     border: none;
     width: 95%;
   }
-  .cartProduct {
+
+  .cartProduct,
+  .wishListProduct {
     display: flex;
     flex-direction: column;
     margin: 1rem;
     border: 1px solid gray;
   }
+
   .cartImg {
     border: none;
     margin: auto;
-    width: 50%;
+    width: 100%;
     height: 43%;
   }
+
   .cartProductDetails,
   .wishListProductDetails {
     border: none;
     padding: 0.5rem;
     width: 100%;
-    height: 11rem;
+    height: 15rem;
     margin: auto;
-    /* margin-left: 3rem; */
   }
+
   .wishListProductDetails {
     height: 15rem;
   }
@@ -1642,50 +1578,40 @@ h1 {
     height: 1rem;
     width: 1rem;
     position: relative;
-    /* margin: 0.5rem; */
     top: 0rem;
     left: 0rem;
   }
   .wishListbi-trashButton,
-  .wishListbi-wishListButton {
+  .cartbi-trashButton {
     background-color: white;
     background-color: none;
     position: relative;
-    top: 0.5rem;
+    top: 0.4rem;
+    width: 80%;
+    padding: 0;
+    margin: auto;
+  }
+  .cartbi-trashButton {
+    left: -1.5rem;
+  }
+
+  .wishListbi-wishListButton {
+    background-color: none;
+    position: relative;
+    top: 5rem;
     left: 0rem;
     padding: 0;
     margin: 0;
-    /* margin: 2rem; */
   }
 
-  .btn.btn-primary {
-    padding: 0.2rem;
-    margin-left: 0.5rem;
-  }
   /* WISHLIST PAGE */
   .wishListPage {
-    top: 3rem;
+    top: 10rem;
     padding: 0rem;
     border: none;
     overflow: hidden;
     width: 100%;
-    margin-bottom: 5rem;
-  }
-
-  .wishList.bi-wishList,
-  .bi-trash {
-    height: 1rem;
-    width: 1rem;
-    position: relative;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background-color: coral;
-    outline: none;
-    border: coral;
-    border-radius: 0.4rem;
-    z-index: 1;
-    left: 0rem;
-    top: 0rem;
+    margin-bottom: 10rem;
   }
 
   /* FOOTER*/
@@ -1696,9 +1622,6 @@ h1 {
     /* width: 100%; */
     padding: 0;
     margin-top: 5rem;
-  }
-  .nameFooter {
-    display: none;
   }
 
   .aboutUs {
