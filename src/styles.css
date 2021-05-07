@@ -1776,19 +1776,19 @@ h1 {
     width: 90%;
     margin-bottom: 15rem;
   }
-}
-/* REDIRECT PAGE*/
-.redirectImage {
-  width: 95%;
-}
-.redirectPage {
-  flex-direction: column;
-  margin-top: 0rem;
-}
+  /* REDIRECT PAGE*/
+  .redirectImage {
+    width: 95%;
+  }
+  .redirectPage {
+    flex-direction: column;
+    margin-top: 0rem;
+  }
 
-.redirectButton {
-  cursor: pointer;
-  margin: auto;
-  font-size: 1rem;
-  width: 80%;
+  .redirectButton {
+    cursor: pointer;
+    margin: auto;
+    font-size: 1rem;
+    width: 80%;
+  }
 }
