@@ -60,7 +60,7 @@ export const Products = () => {
         </div>
         <div className="productsBar">
           <span className="containerForSelectComponent">
-            <label for="sortingSelectBoxs">Sort by : </label>
+            <label htmlFor="sortingSelectBoxs">Sort by : </label>
             <Select
               name="sortingSelectBox"
               id="sortingSelectBox"
