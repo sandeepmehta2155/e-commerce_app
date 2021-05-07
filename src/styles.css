@@ -276,35 +276,6 @@ h1 {
   border: 3px solid var(--secondary-color);
 }
 
-/* MAIN NAVIGATION BAR */
-
-/* .navigation {
-  padding-inline-start: 0;
-  display: block;
-  background-color: #333333;
-  color: white;
-  margin: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
-  top: 5rem;
-  overflow: hidden;
-}
-.navigation a {
-  text-decoration: none;
-}
-
-.navigationPills {
-  background-color: #333333;
-  color: white;
-  font-size: 1rem;
-  list-style: none;
-
-  border: none;
-  display: inline;
-  padding: 1rem;
-} */
-
 /* DARK MODE SWICTHES */
 
 .outerSwitch {
@@ -773,9 +744,15 @@ h1 {
   height: 13rem;
   border-radius: 50%;
 }
+.circle:hover {
+  box-shadow: 0 3px 16px 0 rgb(0 0 0 / 11%);
+}
 .square {
   width: 200px;
   height: 200px;
+}
+.square:hover {
+  box-shadow: 0 3px 16px 0 rgb(0 0 0 / 11%);
 }
 .list.list-group-item {
   list-style: none;
@@ -985,8 +962,13 @@ h1 {
   /* position: relative; */
   color: black;
   background-color: white;
-  border: #000 1px solid;
+  border: lightgray 3px solid;
 }
+.wishListbi-trashButton:hover,
+.cartbi-trashButton:hover {
+  box-shadow: 0 3px 16px 0 rgb(0 0 0 / 11%);
+}
+
 .cartbi-trashButton {
   cursor: pointer;
   float: right;
