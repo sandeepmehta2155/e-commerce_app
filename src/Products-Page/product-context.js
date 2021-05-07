@@ -24,8 +24,8 @@ const itemsInProduct = [
     name: "Wall Street Meat",
     src:
       "https://images-na.ssl-images-amazon.com/images/I/51VFQePgXxL._SX326_BO1,204,203,200_.jpg",
-    Originalprice: 989,
-    price: 824,
+    Originalprice: 299,
+    price: 304,
     quantity: 0,
     wishList: "no",
     stockStatus: "InStock",
