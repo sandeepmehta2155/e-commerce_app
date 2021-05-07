@@ -26,8 +26,8 @@ export { RouteComponents } from "./Router-Components/Route-Components";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <Router>
-      <AuthProvider>
+    <AuthProvider>
+      <Router>
         <ThemeProvider>
           <FilterProvider>
             <ProductProvider>
@@ -35,8 +35,8 @@ ReactDOM.render(
             </ProductProvider>
           </FilterProvider>
         </ThemeProvider>
-      </AuthProvider>
-    </Router>
+      </Router>
+    </AuthProvider>
   </StrictMode>,
   rootElement
 );
