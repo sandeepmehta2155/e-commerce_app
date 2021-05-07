@@ -7,6 +7,7 @@ import { AuthProvider } from "./Login-Page/auth-context";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
+export { RedirectPage } from "./Redirect-Page/Redirect-Page";
 export { Header } from "./HomePage_Components/header";
 export { Footer } from "./HomePage_Components/footer";
 export { FeaturedAuthors } from "./HomePage_Components/featured-authors";

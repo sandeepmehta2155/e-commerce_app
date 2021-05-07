@@ -529,6 +529,23 @@ h1 {
   transform: rotate(200deg);
 }
 
+/* REDIRECT PAGE*/
+.redirectPage {
+  display: flex;
+  margin-top: 8rem;
+}
+
+.redirectButton {
+  cursor: pointer;
+  margin: auto;
+  font-size: 1rem;
+  width: 10rem;
+  transition: 0.5s ease-in-out;
+}
+
+.redirectButton:hover {
+  box-shadow: 0 3px 16px 0 rgb(0 0 0 / 11%);
+}
 /* ANIMATIONS */
 
 @-webkit-keyframes beat {
