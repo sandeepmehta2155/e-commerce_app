@@ -1,13 +1,13 @@
 import { createContext, useEffect, useContext, useState } from "react";
 
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [isUserLoggedIn, setUserLogin] = useState(false);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isUserLoggedIn) {

@@ -1,17 +1,7 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useFeaturedAuthor } from "./featured-provider";
 
 export function FeaturedAuthors() {
-  const [FeaturedAuthors, setFeaturedAuthors] = useState([]);
-  const [FeaturedSeries, setFeaturedSeries] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://e-commerce.sandeepmehta215.repl.co/featured")
-      .then((resp) => {
-        setFeaturedAuthors(resp.data.FeaturedAuthors);
-        setFeaturedSeries(resp.data.FeaturedSeries);
-      });
-  }, []);
+  const { FeaturedAuthors, FeaturedSeries } = useFeaturedAuthor();
 
   return (
     <>

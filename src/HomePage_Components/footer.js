@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { useFilter } from "../Products-Page/filter-context";
-
 export function Footer() {
   const AboutItems = [
     "Contact Us",

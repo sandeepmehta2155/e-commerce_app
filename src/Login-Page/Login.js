@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useAuth } from "./auth-context";
 
 export function Login() {
@@ -35,6 +35,13 @@ export function Login() {
       .then((response) => {
         setResponseFromDataBase(response.data?.message);
       });
+  }
+
+  function Redirects() {
+    return;
+    // return setTimeout(() => {
+    //   <Navigate replace to="/" />;
+    // }, 3000);
   }
 
   return (
@@ -97,6 +104,7 @@ export function Login() {
           <span role="img" aria-labelledby="emoji">
             ✅
           </span>
+          <Redirects />
         </span>
       )}
     </div>

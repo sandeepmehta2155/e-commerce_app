@@ -1,16 +1,7 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useBookBatches } from "./book-batch-provider";
 
 export function BookBatches() {
-  const [img, setImg] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://e-commerce.sandeepmehta215.repl.co/bookbatches")
-      .then((resp) => {
-        if (resp.status === 200) setImg(resp.data.images);
-        else setImg("loading...");
-      });
-  }, []);
+  const { img } = useBookBatches();
 
   return (
     <div className="bookBatches">
