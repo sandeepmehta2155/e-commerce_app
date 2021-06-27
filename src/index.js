@@ -4,6 +4,8 @@ import { ProductProvider } from "./Products-Page/product-context";
 import { FilterProvider } from "./Products-Page/filter-context";
 import { ThemeProvider } from "./HomePage_Components/theme-context";
 import { AuthProvider } from "./Login-Page/auth-context";
+import { FeaturedAuthorProvider } from "./HomePage_Components/featured-provider";
+import { BookBatchProvider } from "./HomePage_Components/book-batch-provider";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
@@ -20,23 +22,26 @@ export { Cart } from "./Cart-Page/cart";
 export { WishList } from "./WishList-Page/wishlist";
 export { UserProfile } from "./UserProfile-Page/userprofile";
 export { PrivateRoute } from "./UserProfile-Page/PrivateRoute";
-export { Feedback } from "./Feedback-page/feedback";
 export { RouteComponents } from "./Router-Components/Route-Components";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <AuthProvider>
-      <Router>
+    <Router>
+      <AuthProvider>
         <ThemeProvider>
           <FilterProvider>
             <ProductProvider>
-              <App />
+              <FeaturedAuthorProvider>
+                <BookBatchProvider>
+                  <App />
+                </BookBatchProvider>
+              </FeaturedAuthorProvider>
             </ProductProvider>
           </FilterProvider>
         </ThemeProvider>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>
+    </Router>
   </StrictMode>,
   rootElement
 );
